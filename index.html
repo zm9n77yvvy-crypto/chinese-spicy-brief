@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>穿搭暗号对一下｜中式辣感活动 brief</title>
+  <style>
+    :root{
+      --ink:#241515;
+      --muted:#735f5a;
+      --paper:#fff8f1;
+      --card:#fffdf9;
+      --red:#c5162e;
+      --red-dark:#8f0718;
+      --gold:#d6a544;
+      --line:rgba(36,21,21,.12);
+      --shadow:0 18px 48px rgba(94,25,31,.12);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,#fff8f1 0%,#fffdf9 52%,#fff3ed 100%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;line-height:1.65;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 8% 8%,rgba(197,22,46,.10),transparent 30%),radial-gradient(circle at 90% 12%,rgba(214,165,68,.18),transparent 28%);z-index:-1}
+    a{color:inherit}.wrap{width:min(980px,100%);margin:0 auto;padding:0 18px}.nav{position:sticky;top:12px;z-index:20;width:min(980px,calc(100% - 24px));margin:12px auto 0;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px 10px 16px;background:rgba(255,253,249,.86);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:999px;box-shadow:0 10px 30px rgba(60,20,20,.08)}
+    .brand{font-weight:900;letter-spacing:-.03em}.navlinks{display:flex;gap:4px}.nav a,.nav button{min-height:44px;border:0;background:transparent;border-radius:999px;padding:0 14px;font-weight:800;color:#5a302f;text-decoration:none;cursor:pointer}.nav a:hover,.nav button:hover{background:#ffe8df;color:var(--red-dark)}
+    .copy-status{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(18px);opacity:0;pointer-events:none;background:#241515;color:#fff;border-radius:999px;padding:11px 16px;font-weight:800;box-shadow:var(--shadow);transition:.22s;z-index:50}.copy-status.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    .section{padding:42px 0}.intro{padding:76px 0 44px}.intro-card{background:rgba(255,253,249,.82);border:1px solid var(--line);border-radius:34px;padding:clamp(24px,5vw,52px);box-shadow:var(--shadow)}.label{display:inline-flex;min-height:34px;align-items:center;border-radius:999px;padding:0 12px;background:#ffe9df;color:var(--red-dark);font-size:13px;font-weight:900;letter-spacing:.04em}.title{font-size:clamp(38px,6.8vw,68px);line-height:.94;letter-spacing:-.08em;margin:18px 0 18px}.title span{color:var(--red);text-shadow:3px 3px 0 #ffd7c2}.lead{font-size:clamp(17px,2.5vw,22px);color:#49302d;max-width:760px;margin:0}.intro-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.btn{min-height:48px;border:0;border-radius:999px;padding:0 18px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:900;text-decoration:none;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s}.btn:hover{transform:translateY(-2px)}.btn.primary{background:var(--red);color:#fff;box-shadow:0 14px 28px rgba(197,22,46,.24)}.btn.secondary{background:#fff;color:var(--red-dark);border:1px solid rgba(197,22,46,.18)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}.kicker{font-size:13px;font-weight:1000;color:var(--red);letter-spacing:.08em;text-transform:uppercase}.section h2{font-size:clamp(28px,4.5vw,48px);line-height:1;margin:5px 0 0;letter-spacing:-.05em}.desc{max-width:600px;color:var(--muted);margin:8px 0 0}.card{background:rgba(255,253,249,.9);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}.rule-list{display:grid;gap:12px}.rule{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px}.rule-num{width:54px;height:54px;border-radius:18px;background:#241515;color:#fff;display:grid;place-items:center;font-weight:1000}.rule h3{margin:0 0 6px;font-size:21px;line-height:1.2}.rule p{margin:0;color:var(--muted)}.rule.important .rule-num{background:var(--red)}.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.tag{display:inline-flex;align-items:center;min-height:34px;padding:0 12px;border-radius:999px;background:#fff0e8;color:var(--red-dark);font-weight:900;border:1px solid rgba(197,22,46,.12)}.copy-card{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px dashed rgba(197,22,46,.35);border-radius:18px;padding:12px;margin-top:12px}.copy-card code{font-family:inherit;color:var(--red-dark);font-weight:900}.copy-btn{min-width:80px;min-height:44px;border:0;border-radius:14px;background:#241515;color:#fff;font-weight:900;cursor:pointer}.copy-btn:hover{background:var(--red-dark)}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}.tab{min-height:44px;border-radius:999px;border:1px solid rgba(197,22,46,.18);background:#fff8f3;color:#5b3131;padding:0 15px;font-weight:900;cursor:pointer}.tab[aria-selected="true"]{background:var(--red);color:#fff;border-color:var(--red);box-shadow:0 12px 24px rgba(197,22,46,.20)}.panel{display:none}.panel.active{display:block;animation:fadeUp .24s ease both}@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}.format-card{display:grid;grid-template-columns:.92fr 1.08fr;gap:18px;align-items:stretch}.format-visual{min-height:390px;border-radius:22px;background-size:contain;background-repeat:no-repeat;background-position:center;background-color:#f7ebe5;position:relative;overflow:hidden}.format-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 58%,rgba(0,0,0,.50))}.format-visual span{position:absolute;z-index:1;left:18px;right:18px;bottom:16px;color:#fff;font-weight:1000;font-size:23px;line-height:1.15}.steps{counter-reset:item;display:grid;gap:12px}.step{counter-increment:item;display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;padding:14px;border-radius:18px;background:#fff7f1;border:1px solid rgba(197,22,46,.1)}.step::before{content:counter(item);width:40px;height:40px;border-radius:50%;background:#241515;color:#fff;display:grid;place-items:center;font-weight:1000}.mini{font-size:13px;color:var(--muted);font-weight:700}
+    .look-wrap{display:grid;grid-template-columns:320px 1fr;gap:18px}.look-menu{display:grid;gap:10px}.look-tab{min-height:58px;text-align:left;border:1px solid var(--line);background:#fff;border-radius:18px;padding:12px 14px;font-weight:900;cursor:pointer;color:#3d2422}.look-tab small{display:block;color:var(--muted);font-weight:700;margin-top:2px}.look-tab[aria-selected="true"]{background:#241515;color:#fff}.look-tab[aria-selected="true"] small{color:rgba(255,255,255,.74)}.look-stage{background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}.look-image{position:relative;height:min(72vh,680px);min-height:560px;background:#f7ebe5}.look-image img{width:100%;height:100%;object-fit:contain;display:block}.look-info{padding:18px;display:flex;align-items:center;justify-content:space-between;gap:14px}.look-info h3{margin:0;font-size:22px;line-height:1.2}.look-info p{margin:6px 0 0;color:var(--muted)}.switcher{display:flex;gap:8px;flex:0 0 auto}.icon-btn{width:44px;height:44px;border:0;border-radius:50%;background:#241515;color:#fff;font-size:22px;font-weight:900;cursor:pointer}.icon-btn:hover{background:var(--red-dark)}.dots{display:flex;gap:6px;margin-top:10px}.dot{width:8px;height:8px;border-radius:50%;background:#e5c8bf}.dot.active{background:var(--red)}
+    .mobile-cta{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:rgba(36,21,21,.94);backdrop-filter:blur(18px);border-radius:24px;padding:10px;box-shadow:0 20px 50px rgba(0,0,0,.20)}.mobile-cta a{width:100%;color:#fff;text-decoration:none}.spacer{height:38px}
+    @media (max-width:860px){.navlinks{display:none}.intro{padding-top:48px}.section-head{display:block}.format-card,.look-wrap{grid-template-columns:1fr}.look-menu{grid-template-columns:1fr 1fr}.look-image{height:min(72vh,620px);min-height:520px}.mobile-cta{display:flex}.spacer{height:74px}}
+    @media (max-width:560px){.wrap{padding:0 14px}.intro-card{padding:24px;border-radius:28px}.title{font-size:52px}.rule{grid-template-columns:44px 1fr;padding:15px}.rule-num{width:44px;height:44px;border-radius:14px}.copy-card{align-items:flex-start;flex-direction:column}.copy-btn{width:100%}.look-menu{grid-template-columns:1fr}.look-image{height:540px;min-height:540px}.look-info{display:block}.switcher{margin-top:14px}.format-visual{min-height:340px}.nav{top:8px}.brand{font-size:14px}}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="copy-status" id="copyStatus" role="status" aria-live="polite">已复制</div>
+  <nav class="nav" aria-label="页面导航">
+    <div class="brand">中式辣感活动 brief</div>
+    <div class="navlinks"><a href="#intro">Intro</a><a href="#rules">活动规则</a><a href="#formats">内容范式</a><a href="#looks">穿搭</a></div>
+    <button type="button" data-copy="#穿搭暗号对一下 #中式辣感">复制话题</button>
+  </nav>
+
+  <main>
+    <section class="intro wrap" id="intro">
+      <div class="intro-card">
+        <span class="label">#穿搭暗号对一下  #中式辣感</span>
+        <h1 class="title">穿搭暗号<br><span>对一下</span></h1>
+        <p class="lead">这次活动想看的不是“怎么穿好看”，而是你如何把真正热爱的兴趣、身份和圈层，通过穿搭表达出来。国风、古着、亚文化、追星、二次元……都可以成为你的穿搭语言。</p>
+        <div class="intro-actions">
+          <a class="btn primary" href="https://doc.weixin.qq.com/forms/ANAAyQcbAAgAfoALgYnABsCNHb34uj0mf" target="_blank" rel="noopener noreferrer">填写返稿收集表</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="rules">
+      <div class="section-head"><div><div class="kicker">01 / Rules</div><h2>活动规则</h2></div><p class="desc">发布前确认以下信息，返稿后请及时填写收集表。</p></div>
+      <div class="rule-list">
+        <article class="rule important"><div class="rule-num">1</div><div><h3>投稿福利</h3><p>优质内容有机会获得单条 10-50w 曝光专项推流；加码福利包括小红书官方薯定制宣推笔记、活动专属定制单人宣推物料。</p></div></article>
+        <article class="rule"><div class="rule-num">2</div><div><h3>活动主题</h3><p>以「兴趣身份」为出发点的穿搭活动，把你在意的东西和热爱的圈层穿出来。</p></div></article>
+        <article class="rule"><div class="rule-num">3</div><div><h3>活动时间</h3><p>即日起 — 9 月 15 日。</p></div></article>
+        <article class="rule"><div class="rule-num">4</div><div><h3>标题正文</h3><p>推荐出现「中式辣感」相关表达，更容易被运营打捞推流。</p></div></article>
+        <article class="rule"><div class="rule-num">5</div><div><h3>必带话题</h3><div class="tag-row"><span class="tag">#穿搭暗号对一下</span><span class="tag">#中式辣感</span></div><div class="copy-card"><code>#穿搭暗号对一下 #中式辣感</code><button class="copy-btn" type="button" data-copy="#穿搭暗号对一下 #中式辣感">复制</button></div></div></article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="formats">
+      <div class="section-head"><div><div class="kicker">02 / Content formats</div><h2>内容范式</h2></div><p class="desc">优先推荐两类视频脚本：风格反差、气场变身。点击切换查看拍法。</p></div>
+      <div class="tabs" role="tablist" aria-label="内容范式切换">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="panel-soft-hot" id="tab-soft-hot">浓淡不同自相宜</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-mean-girl" id="tab-mean-girl">唐人街 mean girl</button>
+      </div>
+      <div class="panel active" id="panel-soft-hot" role="tabpanel" aria-labelledby="tab-soft-hot">
+        <article class="card format-card">
+          <div class="format-visual" style="background-image:url('./assets/img/ref-01.jpg')"><span>同一个人，演绎两种浓淡中式风格</span></div>
+          <div><h3>画面结构</h3><p>前半段展示风格 A，例如素色清冷新中式；通过一个明确转场动作，切换到风格 B，例如浓烈张扬的印花旗袍。</p><div class="steps"><div class="step"><div><strong>开场给身份暗号</strong><br><span class="mini">用字幕点出：当你尝试搭出浓淡两种中式风格。</span></div></div><div class="step"><div><strong>风格 A：清冷 / 素色 / 克制</strong><br><span class="mini">动作慢一点，突出材质、廓形、妆发。</span></div></div><div class="step"><div><strong>转场切换</strong><br><span class="mini">拍照切换、遮镜、甩衣服、回头都可以。</span></div></div><div class="step"><div><strong>风格 B：浓烈 / 张扬 / 辣感</strong><br><span class="mini">用红、印花、盘发、大光明、腿袜或靴子制造记忆点。</span></div></div></div></div>
+        </article>
+      </div>
+      <div class="panel" id="panel-mean-girl" role="tabpanel" aria-labelledby="tab-mean-girl">
+        <article class="card format-card">
+          <div class="format-visual" style="background-image:url('./assets/img/ref-02.jpg')"><span>素颜随意，到气场全开的中式辣感</span></div>
+          <div><h3>画面结构</h3><p>前半段头顶卷发筒、素颜、吊带或家居服；后半段换上全妆中式辣感穿搭，自信走向镜头。</p><div class="steps"><div class="step"><div><strong>反差开场</strong><br><span class="mini">素颜、卷发筒、家居状态，先把“没准备好”演出来。</span></div></div><div class="step"><div><strong>一秒变身</strong><br><span class="mini">用遮镜/关灯/换鞋/推门完成转场。</span></div></div><div class="step"><div><strong>气场走位</strong><br><span class="mini">全妆、旗袍/盘扣/印花，走向镜头或街景。</span></div></div><div class="step"><div><strong>标题可参考</strong><br><span class="mini">唐人街来了位不好惹的中国 mean girl。</span></div></div></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="looks">
+      <div class="section-head"><div><div class="kicker">03 / Outfit ideas</div><h2>穿搭</h2></div><p class="desc">每组图片统一展示尺寸；同组两张图可点击左右按钮切换。</p></div>
+      <div class="look-wrap">
+        <div class="look-menu" role="tablist" aria-label="穿搭类型切换">
+          <button class="look-tab" role="tab" aria-selected="true" data-look="0">改良旗袍 suit<small>大光明 / 盘发</small></button>
+          <button class="look-tab" role="tab" aria-selected="false" data-look="1">改良旗袍 + 裤装<small>日常街头冲突感</small></button>
+          <button class="look-tab" role="tab" aria-selected="false" data-look="2">改良旗袍 + 靴子<small>辣感 / 亚文化</small></button>
+          <button class="look-tab" role="tab" aria-selected="false" data-look="3">盘扣上衣 + 日常裤装<small>低门槛好上手</small></button>
+        </div>
+        <article class="look-stage" aria-live="polite">
+          <div class="look-image"><img id="lookImg" src="./assets/img/ref-03.jpg" alt="改良旗袍 suit 穿搭参考"></div>
+          <div class="look-info">
+            <div><h3 id="lookTitle">改良旗袍 suit + 大光明/盘发</h3><p id="lookText">适合走强气场、拽感、电影感路线。</p><div class="dots" id="lookDots" aria-hidden="true"><span class="dot active"></span><span class="dot "></span></div></div>
+            <div class="switcher"><button class="icon-btn" type="button" id="prevLook" aria-label="上一张">‹</button><button class="icon-btn" type="button" id="nextLook" aria-label="下一张">›</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <div class="spacer"></div>
+  </main>
+
+  <div class="mobile-cta"><a class="btn primary" href="https://doc.weixin.qq.com/forms/ANAAyQcbAAgAfoALgYnABsCNHb34uj0mf" target="_blank" rel="noopener noreferrer">填写返稿收集表</a></div>
+  <script>
+    const status = document.getElementById('copyStatus');
+    function showStatus(text){ status.textContent=text; status.classList.add('show'); clearTimeout(window.__copyTimer); window.__copyTimer=setTimeout(()=>status.classList.remove('show'),1500); }
+    async function copyText(text){ try{ await navigator.clipboard.writeText(text); showStatus('已复制'); }catch(e){ const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); showStatus('已复制'); }}
+    document.querySelectorAll('[data-copy]').forEach(btn=>btn.addEventListener('click',()=>copyText(btn.dataset.copy)));
+
+    const formatTabs=[...document.querySelectorAll('#formats [role="tab"]')];
+    formatTabs.forEach(tab=>tab.addEventListener('click',()=>{ formatTabs.forEach(t=>{t.setAttribute('aria-selected','false'); document.getElementById(t.getAttribute('aria-controls')).classList.remove('active');}); tab.setAttribute('aria-selected','true'); document.getElementById(tab.getAttribute('aria-controls')).classList.add('active'); }));
+
+    const looks=[
+      {title:'改良旗袍 suit + 大光明/盘发', text:'适合走强气场、拽感、电影感路线。', alt:'改良旗袍 suit 穿搭参考', imgs:['./assets/img/ref-03.jpg','./assets/img/ref-04.jpg']},
+      {title:'改良旗袍 + 裤装', text:'把传统廓形穿进日常街头，利落又有冲突感。', alt:'改良旗袍搭配裤装参考', imgs:['./assets/img/ref-05.jpg','./assets/img/ref-06.jpg']},
+      {title:'改良旗袍 + 腿袜/靴子', text:'更辣、更亚文化，适合强视觉视频封面。', alt:'改良旗袍搭配腿袜或靴子参考', imgs:['./assets/img/ref-07.jpg','./assets/img/ref-08.jpg']},
+      {title:'盘扣上衣 + 日常裤装', text:'适合古着、通勤、citywalk 场景，门槛更低。', alt:'盘扣上衣搭配日常裤装参考', imgs:['./assets/img/ref-09.jpg','./assets/img/ref-10.jpg']}
+    ];
+    let activeLook=0, activeImg=0;
+    const lookImg=document.getElementById('lookImg'), lookTitle=document.getElementById('lookTitle'), lookText=document.getElementById('lookText'), dots=document.getElementById('lookDots');
+    function renderLook(){ const item=looks[activeLook]; lookImg.src=item.imgs[activeImg]; lookImg.alt=item.alt; lookTitle.textContent=item.title; lookText.textContent=item.text; dots.innerHTML=item.imgs.map((_,i)=>`<span class="dot ${i===activeImg?'active':''}"></span>`).join(''); document.querySelectorAll('.look-tab').forEach((btn,i)=>btn.setAttribute('aria-selected',String(i===activeLook))); }
+    document.querySelectorAll('.look-tab').forEach(btn=>btn.addEventListener('click',()=>{ activeLook=Number(btn.dataset.look); activeImg=0; renderLook(); }));
+    document.getElementById('prevLook').addEventListener('click',()=>{ const len=looks[activeLook].imgs.length; activeImg=(activeImg-1+len)%len; renderLook(); });
+    document.getElementById('nextLook').addEventListener('click',()=>{ const len=looks[activeLook].imgs.length; activeImg=(activeImg+1)%len; renderLook(); });
+    renderLook();
+  </script>
+</body></html>
