@@ -73,7 +73,7 @@
 
     /* 置顶笔记卡 */
     .pinned{max-width:980px;margin:16px auto 0;padding:0 18px}
-    .pinned-card{display:flex;align-items:center;gap:16px;background:rgba(255,253,249,.92);border:1px solid var(--line);border-radius:22px;padding:14px 16px;box-shadow:var(--shadow);text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s}
+    .pinned-card{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:22px;padding:12px 14px;margin-top:16px;box-shadow:0 8px 22px rgba(94,25,31,.10);text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s}
     .pinned-card:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(197,22,46,.16)}
     .pinned-thumb{width:76px;height:100px;flex:0 0 auto;border-radius:14px;overflow:hidden;background:#f7ebe5;border:2px solid rgba(214,165,68,.5)}
     .pinned-thumb img{width:100%;height:100%;object-fit:cover;display:block}
@@ -156,6 +156,15 @@
               <a class="btn primary" href="https://fe.xiaohongshu.com/ditto/vincent/fb217b46c0a64dc89b6a14b6d4917338?naviHidden=yes&fullscreen=true&source=wowcard" target="_blank" rel="noopener noreferrer">进入活动主页面</a>
               <a class="btn primary" href="https://doc.weixin.qq.com/forms/ANAAyQcbAAgAfoALgYnABsCNHb34uj0mf" target="_blank" rel="noopener noreferrer">填写返稿收集表</a>
             </div>
+            <a class="pinned-card" href="https://www.xiaohongshu.com/explore/6a5624c8000000001101e173" target="_blank" rel="noopener noreferrer">
+              <div class="pinned-thumb"><img src="./assets/img/cover-pinned.webp" alt="活动官宣笔记封面"></div>
+              <div class="pinned-body">
+                <span class="pinned-tag">📌 活动官宣笔记</span>
+                <h4>穿搭暗号对一下｜用一件衣服认出自己人</h4>
+                <p>点击查看活动官宣笔记详情</p>
+              </div>
+              <span class="go">查看笔记 →</span>
+            </a>
           </div>
           <figure class="hero-figure">
             <svg class="cn-corner tl" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#d6a544" stroke-width="2.4"><path d="M4 4 h20 M4 4 v20 M4 14 h10 v-10 M14 14 h4 v-4"/></g></svg>
@@ -169,21 +178,9 @@
       </div>
     </section>
 
-    <!-- 置顶笔记 -->
-    <div class="pinned">
-      <a class="pinned-card" href="https://www.xiaohongshu.com/explore/6a5624c8000000001101e173" target="_blank" rel="noopener noreferrer">
-        <div class="pinned-thumb"><img src="./assets/img/cover-pinned.webp" alt="置顶笔记封面"></div>
-        <div class="pinned-body">
-          <span class="pinned-tag">📌 置顶笔记</span>
-          <h4>穿搭暗号对一下｜用一件衣服认出自己人</h4>
-          <p>点击查看活动置顶笔记详情</p>
-        </div>
-        <span class="go">查看笔记 →</span>
-      </a>
-    </div>
-
     <!-- 一、圈层简介 -->
     <section class="zone wrap" id="zone">
+      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">圈层<br>简介</span><div><div class="kicker">一 / 圈层简介</div><h2>圈层简介</h2></div></div></div>
       <div class="zone-card">
         <span class="zone-year">2026 中式圈层新审美</span>
         <h2>辣感当道，<span class="hot">中式古韵与辣酷碰撞出全新表达</span></h2>
@@ -193,18 +190,18 @@
     </section>
 
     <section class="section wrap" id="rules">
-      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">参与<br>方式</span><div><div class="kicker">02 / How to join</div><h2>参与方式</h2></div></div><p class="desc">发布前确认以下信息，返稿后请及时填写收集表。</p></div>
+      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">参与<br>方式</span><div><div class="kicker">二 / 参与方式</div><h2>参与方式</h2></div></div><p class="desc">发布前确认以下信息，返稿后请及时填写收集表。</p></div>
       <div class="rule-list">
         <article class="rule important"><div class="rule-num">1</div><div><h3>投稿福利</h3><div class="rule-sub"><div class="item"><b>常规福利</b><span>优质内容有机会获得单条 10-50w 曝光专项推流。</span></div><div class="item"><b>加码福利</b><span>小红书官方薯定制宣推笔记、活动专属定制单人宣推物料。</span></div></div></div></article>
         <article class="rule"><div class="rule-num">2</div><div><h3>活动主题</h3><p>以「兴趣身份」为出发点的穿搭活动，把你在意的东西和热爱的圈层穿出来。</p></div></article>
         <article class="rule"><div class="rule-num">3</div><div><h3>活动时间</h3><p>即日起 — 9 月 15 日。</p></div></article>
         <article class="rule"><div class="rule-num">4</div><div><h3>标题正文</h3><p>推荐出现「中式辣感」相关表达，更容易被运营打捞推流。</p></div></article>
-        <article class="rule"><div class="rule-num">5</div><div><h3>必带话题</h3><div class="tag-row"><span class="tag">#穿搭暗号对一下</span><span class="tag">#中式辣感</span></div><div class="copy-card"><code>#穿搭暗号对一下 #中式辣感</code><button class="copy-btn" type="button" data-copy="#穿搭暗号对一下 #中式辣感">复制</button></div></div></article>
+        <article class="rule"><div class="rule-num">5</div><div><h3>必带话题</h3><div class="tag-row"><span class="tag">#穿搭暗号对一下</span><span class="tag">#中式辣感</span><button class="copy-btn" type="button" data-copy="#穿搭暗号对一下 #中式辣感">复制</button></div></div></article>
       </div>
     </section>
 
     <section class="section wrap" id="formats">
-      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">内容<br>方向</span><div><div class="kicker">03 / Content</div><h2>内容方向</h2></div></div><p class="desc">优先推荐两类视频脚本：风格反差、气场变身。点击切换查看拍法。</p></div>
+      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">内容<br>方向</span><div><div class="kicker">三 / 内容方向</div><h2>内容方向</h2></div></div><p class="desc">优先推荐两类视频脚本：风格反差、气场变身。点击切换查看拍法。</p></div>
       <div class="tabs" role="tablist" aria-label="内容范式切换">
         <button class="tab" role="tab" aria-selected="true" aria-controls="panel-soft-hot" id="tab-soft-hot">浓淡不同自相宜</button>
         <button class="tab" role="tab" aria-selected="false" aria-controls="panel-mean-girl" id="tab-mean-girl">唐人街 mean girl</button>
@@ -224,7 +221,7 @@
     </section>
 
     <section class="section wrap" id="looks">
-      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">穿搭<br>思路</span><div><div class="kicker">04 / Outfit & items</div><h2>穿搭思路</h2></div></div></div>
+      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">穿搭<br>思路</span><div><div class="kicker">四 / 穿搭思路 + 单品</div><h2>穿搭思路</h2></div></div></div>
       <div class="look-wrap">
         <div class="look-menu" role="tablist" aria-label="穿搭类型切换">
           <button class="look-tab" role="tab" aria-selected="true" data-look="0">改良旗袍 suit<small>大光明 / 盘发</small></button>
@@ -247,7 +244,7 @@
     </section>
 
     <section class="section wrap" id="items">
-      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">单品<br>示范</span><div><div class="kicker">04 / Item ideas</div><h2>单品示范</h2></div></div><p class="desc">切换旗袍 / 中式上衣，参考单品搭配方向。</p></div>
+      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">单品<br>示范</span><div><div class="kicker">四 / 单品示范</div><h2>单品示范</h2></div></div><p class="desc">切换旗袍 / 中式上衣，参考单品搭配方向。</p></div>
       <div class="item-tabs" role="tablist" aria-label="单品类型切换">
         <button class="item-tab" role="tab" aria-selected="true" data-item-tab="qipao">旗袍</button>
         <button class="item-tab" role="tab" aria-selected="false" data-item-tab="top">中式上衣</button>
