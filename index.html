@@ -73,6 +73,32 @@
     .hero-figure .cn-corner{z-index:3;opacity:.9}
     @media (max-width:760px){.intro-grid{grid-template-columns:1fr}.hero-figure{max-width:420px;margin:6px auto 0}}
 
+    /* 置顶笔记卡 */
+    .pinned{max-width:980px;margin:16px auto 0;padding:0 18px}
+    .pinned-card{display:flex;align-items:center;gap:16px;background:rgba(255,253,249,.92);border:1px solid var(--line);border-radius:22px;padding:14px 16px;box-shadow:var(--shadow);text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s}
+    .pinned-card:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(197,22,46,.16)}
+    .pinned-thumb{width:76px;height:100px;flex:0 0 auto;border-radius:14px;overflow:hidden;background:#f7ebe5;border:2px solid rgba(214,165,68,.5)}
+    .pinned-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .pinned-body{min-width:0;flex:1}
+    .pinned-tag{display:inline-flex;align-items:center;gap:5px;min-height:26px;padding:0 10px;border-radius:999px;background:var(--red);color:#fff;font-size:12px;font-weight:900;letter-spacing:.04em}
+    .pinned-body h4{margin:8px 0 2px;font-size:18px;line-height:1.3}
+    .pinned-body p{margin:0;color:var(--muted);font-size:14px}
+    .pinned-card .go{flex:0 0 auto;color:var(--red);font-weight:900;font-size:14px;white-space:nowrap}
+
+    /* 圈层简介 */
+    .zone{padding:34px 0 8px}
+    .zone-card{background:linear-gradient(135deg,rgba(197,22,46,.05),rgba(214,165,68,.08));border:1px solid var(--line);border-radius:28px;padding:clamp(26px,5vw,46px);box-shadow:var(--shadow);text-align:center;position:relative;overflow:hidden}
+    .zone-year{display:inline-block;font-size:14px;font-weight:900;letter-spacing:.14em;color:var(--red);margin-bottom:10px}
+    .zone-card h2{font-size:clamp(26px,4.6vw,44px);line-height:1.18;letter-spacing:-.03em;margin:0 0 14px}
+    .zone-card .hot{color:var(--red);text-shadow:2px 2px 0 #ffd7c2}
+    .zone-card p{max-width:620px;margin:0 auto;font-size:clamp(16px,2.3vw,20px);color:#49302d;line-height:1.8}
+    .zone-card .invite{margin-top:16px;font-weight:900;color:var(--red-dark);font-size:clamp(17px,2.4vw,22px)}
+
+    /* 小梅花装饰带 */
+    .cn-plum{display:flex;align-items:center;justify-content:center;gap:14px;max-width:980px;margin:6px auto 0;padding:0 18px}
+    .cn-plum .line{height:1px;flex:1;max-width:300px;background:linear-gradient(90deg,transparent,rgba(197,22,46,.4),transparent)}
+    .cn-plum svg{width:34px;height:auto;flex:0 0 auto}
+
     /* 分区之间的祥云小分隔 */
     .cn-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:6px auto 0;max-width:980px;color:var(--red);opacity:.6}
     .cn-divider svg{width:46px;height:auto}
@@ -107,43 +133,15 @@
   <div class="copy-status" id="copyStatus" role="status" aria-live="polite">已复制</div>
   <nav class="nav" aria-label="页面导航">
     <div class="brand">中式辣感活动 brief</div>
-    <div class="navlinks"><a href="#intro">Intro</a><a href="#rules">活动规则</a><a href="#formats">内容范式</a><a href="#looks">穿搭</a><a href="#items">单品示范</a></div>
+    <div class="navlinks"><a href="#zone">圈层简介</a><a href="#rules">参与方式</a><a href="#formats">内容方向</a><a href="#looks">穿搭思路</a><a href="#items">单品示范</a></div>
     <button type="button" data-copy="#穿搭暗号对一下 #中式辣感">复制话题</button>
   </nav>
 
-  <!-- 祥云双龙戏珠装饰带 -->
-  <div class="cn-cloudband cn-deco" aria-hidden="true">
-    <svg viewBox="0 0 980 120" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="dragGold" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#e7be5f"/><stop offset="1" stop-color="#c48f2a"/>
-        </linearGradient>
-      </defs>
-      <g>
-        <circle cx="490" cy="60" r="15" fill="#c5162e"/>
-        <circle cx="490" cy="60" r="15" fill="none" stroke="url(#dragGold)" stroke-width="2.5"/>
-        <circle cx="490" cy="60" r="6" fill="none" stroke="#f2d79a" stroke-width="1.6"/>
-      </g>
-      <g fill="none" stroke="#c5162e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M60 78 C120 40 180 96 250 60 C300 34 360 78 430 60"/>
-        <path d="M250 60 C255 46 272 44 280 56" stroke="#d6a544" stroke-width="2.4"/>
-        <path d="M120 66 c-6 -14 8 -22 18 -14" stroke="#d6a544" stroke-width="2.4"/>
-        <path d="M190 74 c-6 -14 8 -22 18 -14" stroke="#d6a544" stroke-width="2.4"/>
-        <path d="M60 78 c-16 -4 -26 8 -20 20 c14 6 26 -4 26 -16" fill="#c5162e"/>
-        <circle cx="420" cy="58" r="3.4" fill="#241515" stroke="none"/>
-      </g>
-      <g fill="none" stroke="#c5162e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(980,0) scale(-1,1)">
-        <path d="M60 78 C120 40 180 96 250 60 C300 34 360 78 430 60"/>
-        <path d="M250 60 C255 46 272 44 280 56" stroke="#d6a544" stroke-width="2.4"/>
-        <path d="M120 66 c-6 -14 8 -22 18 -14" stroke="#d6a544" stroke-width="2.4"/>
-        <path d="M190 74 c-6 -14 8 -22 18 -14" stroke="#d6a544" stroke-width="2.4"/>
-        <path d="M60 78 c-16 -4 -26 8 -20 20 c14 6 26 -4 26 -16" fill="#c5162e"/>
-        <circle cx="420" cy="58" r="3.4" fill="#241515" stroke="none"/>
-      </g>
-      <g fill="none" stroke="#d6a544" stroke-width="2.2" opacity=".9">
-        <path d="M150 100 c0 -12 18 -12 18 0 c10 -8 22 2 16 12 M300 104 c0 -10 16 -10 16 0 c9 -7 20 2 15 11 M664 104 c0 -10 16 -10 16 0 c9 -7 20 2 15 11 M812 100 c0 -12 18 -12 18 0 c10 -8 22 2 16 12"/>
-      </g>
-    </svg>
+  <!-- 梅花装饰带 -->
+  <div class="cn-plum cn-deco" aria-hidden="true">
+    <span class="line"></span>
+    <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g><g fill="#c5162e" opacity=".92"><circle cx="30" cy="14" r="8"/><circle cx="45" cy="25" r="8"/><circle cx="39" cy="43" r="8"/><circle cx="21" cy="43" r="8"/><circle cx="15" cy="25" r="8"/></g><circle cx="30" cy="30" r="5" fill="#d6a544"/><g stroke="#d6a544" stroke-width="1.4" stroke-linecap="round"><path d="M30 30 l0 -8 M30 30 l7 4 M30 30 l-7 4 M30 30 l5 -6 M30 30 l-5 -6"/></g></g></svg>
+    <span class="line"></span>
   </div>
 
   <main>
@@ -173,8 +171,31 @@
       </div>
     </section>
 
+    <!-- 置顶笔记 -->
+    <div class="pinned">
+      <a class="pinned-card" href="https://www.xiaohongshu.com/explore/6a5624c8000000001101e173" target="_blank" rel="noopener noreferrer">
+        <div class="pinned-thumb"><img src="./assets/img/cover-pinned.webp" alt="置顶笔记封面"></div>
+        <div class="pinned-body">
+          <span class="pinned-tag">📌 置顶笔记</span>
+          <h4>穿搭暗号对一下｜用一件衣服认出自己人</h4>
+          <p>点击查看活动置顶笔记详情</p>
+        </div>
+        <span class="go">查看笔记 →</span>
+      </a>
+    </div>
+
+    <!-- 一、圈层简介 -->
+    <section class="zone wrap" id="zone">
+      <div class="zone-card">
+        <span class="zone-year">2026 中式圈层新审美</span>
+        <h2>辣感当道，<span class="hot">中式古韵与辣酷碰撞出全新表达</span></h2>
+        <p>2026 年中式圈层的新审美——把中式古韵的内敛，和辣感的张扬、酷，撞在一起，穿出属于自己的中式表达。</p>
+        <div class="invite">#中式辣感 邀你发布</div>
+      </div>
+    </section>
+
     <section class="section wrap" id="rules">
-      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">活动<br>规则</span><div><div class="kicker">01 / Rules</div><h2>活动规则</h2></div></div><p class="desc">发布前确认以下信息，返稿后请及时填写收集表。</p></div>
+      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">参与<br>方式</span><div><div class="kicker">02 / How to join</div><h2>参与方式</h2></div></div><p class="desc">发布前确认以下信息，返稿后请及时填写收集表。</p></div>
       <div class="rule-list">
         <article class="rule important"><div class="rule-num">1</div><div><h3>投稿福利</h3><div class="rule-sub"><div class="item"><b>常规福利</b><span>优质内容有机会获得单条 10-50w 曝光专项推流。</span></div><div class="item"><b>加码福利</b><span>小红书官方薯定制宣推笔记、活动专属定制单人宣推物料。</span></div></div></div></article>
         <article class="rule"><div class="rule-num">2</div><div><h3>活动主题</h3><p>以「兴趣身份」为出发点的穿搭活动，把你在意的东西和热爱的圈层穿出来。</p></div></article>
@@ -185,7 +206,7 @@
     </section>
 
     <section class="section wrap" id="formats">
-      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">内容<br>范式</span><div><div class="kicker">02 / Content formats</div><h2>内容范式</h2></div></div><p class="desc">优先推荐两类视频脚本：风格反差、气场变身。点击切换查看拍法。</p></div>
+      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">内容<br>方向</span><div><div class="kicker">03 / Content</div><h2>内容方向</h2></div></div><p class="desc">优先推荐两类视频脚本：风格反差、气场变身。点击切换查看拍法。</p></div>
       <div class="tabs" role="tablist" aria-label="内容范式切换">
         <button class="tab" role="tab" aria-selected="true" aria-controls="panel-soft-hot" id="tab-soft-hot">浓淡不同自相宜</button>
         <button class="tab" role="tab" aria-selected="false" aria-controls="panel-mean-girl" id="tab-mean-girl">唐人街 mean girl</button>
@@ -205,7 +226,7 @@
     </section>
 
     <section class="section wrap" id="looks">
-      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">穿搭<br>思路</span><div><div class="kicker">03 / Outfit ideas</div><h2>穿搭思路</h2></div></div></div>
+      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">穿搭<br>思路</span><div><div class="kicker">04 / Outfit & items</div><h2>穿搭思路</h2></div></div></div>
       <div class="look-wrap">
         <div class="look-menu" role="tablist" aria-label="穿搭类型切换">
           <button class="look-tab" role="tab" aria-selected="true" data-look="0">改良旗袍 suit<small>大光明 / 盘发</small></button>
@@ -251,17 +272,16 @@
     <div class="spacer"></div>
   </main>
 
-  <!-- 页脚：祥云 + 花窗 -->
+  <!-- 页脚：梅花 -->
   <footer class="cn-footer cn-deco" aria-hidden="false">
-    <svg viewBox="0 0 520 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <g fill="none" stroke="#c5162e" stroke-width="2" stroke-linecap="round">
-        <path d="M20 60 h180 M320 60 h180" stroke="#d6a544"/>
-        <path d="M120 60 c0 -14 20 -14 20 0 c11 -9 24 2 18 13 M380 60 c0 -14 20 -14 20 0 c11 -9 24 2 18 13" stroke="#d6a544"/>
+    <svg viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g fill="none" stroke="#d6a544" stroke-width="2" stroke-linecap="round">
+        <path d="M20 40 h190 M310 40 h190"/>
       </g>
-      <g transform="translate(236,20)">
-        <rect x="0" y="0" width="48" height="48" rx="8" fill="none" stroke="#c5162e" stroke-width="2.4"/>
-        <path d="M24 0 v48 M0 24 h48 M12 12 h24 v24 h-24 z" fill="none" stroke="#d6a544" stroke-width="1.6"/>
-        <circle cx="24" cy="24" r="6" fill="#c5162e"/>
+      <g transform="translate(232,10)">
+        <g fill="#c5162e" opacity=".92"><circle cx="28" cy="12" r="9"/><circle cx="45" cy="25" r="9"/><circle cx="38" cy="45" r="9"/><circle cx="18" cy="45" r="9"/><circle cx="11" cy="25" r="9"/></g>
+        <circle cx="28" cy="28" r="6" fill="#d6a544"/>
+        <g stroke="#d6a544" stroke-width="1.5" stroke-linecap="round"><path d="M28 28 l0 -9 M28 28 l8 5 M28 28 l-8 5 M28 28 l6 -7 M28 28 l-6 -7"/></g>
       </g>
     </svg>
     <p>穿搭暗号对一下 · 中式辣感</p>
