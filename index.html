@@ -87,8 +87,7 @@
     .pinned-thumb img{width:100%;height:100%;object-fit:cover;display:block}
     .pinned-body{min-width:0;flex:1}
     .pinned-tag{display:inline-flex;align-items:center;gap:5px;min-height:26px;padding:0 10px;border-radius:999px;background:var(--red);color:#fff;font-size:12px;font-weight:900;letter-spacing:.04em}
-    .pinned-body h4{margin:8px 0 2px;font-size:18px;line-height:1.3}
-    .pinned-body p{margin:0;color:var(--muted);font-size:14px}
+    .pinned-body h4{margin:4px 0 0;font-size:14px;line-height:1.35;font-weight:800;color:var(--ink)}
     .pinned-card .go{flex:0 0 auto;color:var(--red);font-weight:900;font-size:14px;white-space:nowrap}
 
     /* 圈层简介 */
@@ -112,16 +111,21 @@
     .fmt-body .go{color:var(--red);font-weight:900;font-size:14px}
     @media (max-width:640px){.fmt-row{grid-template-columns:1fr}.fmt-left{padding:12px 14px}.fmt-right{grid-template-columns:84px 1fr}.fmt-thumb{width:84px;height:112px}}
 
-    /* 穿搭思路：一图一思路平铺 */
-    .idea-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .idea{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 10px 26px rgba(94,25,31,.10)}
-    .idea-img{aspect-ratio:3/4;background:#f7ebe5}
-    .idea-img img{width:100%;height:100%;object-fit:cover;display:block}
-    .idea-cap{padding:12px 14px}
-    .idea-cap h4{margin:0 0 3px;font-size:15px;line-height:1.3}
-    .idea-cap p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
-    @media (max-width:860px){.idea-grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:480px){.idea-grid{grid-template-columns:1fr}}
+    /* 穿搭思路：4 卡平铺，每卡 2 图可切换 */
+    .idea-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .idea{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 12px 30px rgba(94,25,31,.12)}
+    .idea-stage{position:relative;aspect-ratio:4/5;background:#f7ebe5}
+    .idea-stage img{width:100%;height:100%;object-fit:cover;display:block}
+    .idea-nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border:0;border-radius:50%;background:rgba(36,21,21,.6);color:#fff;font-size:22px;font-weight:900;cursor:pointer;display:grid;place-items:center;z-index:2}
+    .idea-nav:hover{background:var(--red-dark)}
+    .idea-nav.prev{left:12px}.idea-nav.next{right:12px}
+    .idea-dots{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:6px;z-index:2}
+    .idea-dots .d{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.6);box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+    .idea-dots .d.active{background:var(--red)}
+    .idea-cap{padding:16px 18px}
+    .idea-cap h4{margin:0 0 5px;font-size:19px;line-height:1.3}
+    .idea-cap p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+    @media (max-width:640px){.idea-grid{grid-template-columns:1fr}}
     .cn-plum{display:flex;align-items:center;justify-content:center;gap:14px;max-width:980px;margin:6px auto 0;padding:0 18px}
     .cn-plum .line{height:1px;flex:1;max-width:300px;background:linear-gradient(90deg,transparent,rgba(197,22,46,.4),transparent)}
     .cn-plum svg{width:34px;height:auto;flex:0 0 auto}
@@ -186,13 +190,10 @@
               <a class="btn primary" href="https://doc.weixin.qq.com/forms/ANAAyQcbAAgAfoALgYnABsCNHb34uj0mf" target="_blank" rel="noopener noreferrer">填写返稿收集表</a>
             </div>
             <a class="pinned-card" href="https://www.xiaohongshu.com/explore/6a5624c8000000001101e173" target="_blank" rel="noopener noreferrer">
-              <div class="pinned-thumb"><img src="./assets/img/cover-pinned.webp" alt="活动官宣笔记封面"></div>
               <div class="pinned-body">
-                <span class="pinned-tag">📌 活动官宣笔记</span>
+                <span class="pinned-tag">📌 官宣笔记</span>
                 <h4>穿搭暗号对一下｜用一件衣服认出自己人</h4>
-                <p>点击查看活动官宣笔记详情</p>
               </div>
-              <span class="go">查看笔记 →</span>
             </a>
           </div>
           <figure class="hero-figure">
@@ -248,10 +249,42 @@
     <section class="section wrap" id="looks">
       <div class="section-head"><div class="head-left"><span class="cn-seal seal-num" aria-hidden="true">四</span><h2>穿搭思路</h2></div></div>
       <div class="idea-grid">
-        <figure class="idea"><div class="idea-img"><img src="./assets/img/ref-03.jpg" alt="改良旗袍 suit"></div><figcaption class="idea-cap"><h4>改良旗袍 suit</h4><p>大光明 / 盘发，强气场拽感。</p></figcaption></figure>
-        <figure class="idea"><div class="idea-img"><img src="./assets/img/ref-05.jpg" alt="改良旗袍 + 裤装"></div><figcaption class="idea-cap"><h4>改良旗袍 + 裤装</h4><p>日常街头冲突感，利落。</p></figcaption></figure>
-        <figure class="idea"><div class="idea-img"><img src="./assets/img/ref-07.jpg" alt="改良旗袍 + 腿袜/靴子"></div><figcaption class="idea-cap"><h4>改良旗袍 + 腿袜/靴子</h4><p>更辣、亚文化，强视觉封面。</p></figcaption></figure>
-        <figure class="idea"><div class="idea-img"><img src="./assets/img/ref-09.jpg" alt="盘扣上衣 + 日常裤装"></div><figcaption class="idea-cap"><h4>盘扣上衣 + 日常裤装</h4><p>古着 / citywalk，门槛更低。</p></figcaption></figure>
+        <figure class="idea" data-idea>
+          <div class="idea-stage">
+            <button class="idea-nav prev" type="button" aria-label="上一张">‹</button>
+            <img data-imgs='["./assets/img/ref-03.jpg","./assets/img/ref-04.jpg"]' src="./assets/img/ref-03.jpg" alt="改良旗袍 suit">
+            <button class="idea-nav next" type="button" aria-label="下一张">›</button>
+            <div class="idea-dots"></div>
+          </div>
+          <figcaption class="idea-cap"><h4>改良旗袍 suit</h4><p>大光明 / 盘发，强气场拽感、电影感。</p></figcaption>
+        </figure>
+        <figure class="idea" data-idea>
+          <div class="idea-stage">
+            <button class="idea-nav prev" type="button" aria-label="上一张">‹</button>
+            <img data-imgs='["./assets/img/ref-05.jpg","./assets/img/ref-06.jpg"]' src="./assets/img/ref-05.jpg" alt="改良旗袍 + 裤装">
+            <button class="idea-nav next" type="button" aria-label="下一张">›</button>
+            <div class="idea-dots"></div>
+          </div>
+          <figcaption class="idea-cap"><h4>改良旗袍 + 裤装</h4><p>把传统廓形穿进日常街头，利落又有冲突感。</p></figcaption>
+        </figure>
+        <figure class="idea" data-idea>
+          <div class="idea-stage">
+            <button class="idea-nav prev" type="button" aria-label="上一张">‹</button>
+            <img data-imgs='["./assets/img/ref-07.jpg","./assets/img/ref-08.jpg"]' src="./assets/img/ref-07.jpg" alt="改良旗袍 + 腿袜/靴子">
+            <button class="idea-nav next" type="button" aria-label="下一张">›</button>
+            <div class="idea-dots"></div>
+          </div>
+          <figcaption class="idea-cap"><h4>改良旗袍 + 腿袜/靴子</h4><p>更辣、更亚文化，适合强视觉视频封面。</p></figcaption>
+        </figure>
+        <figure class="idea" data-idea>
+          <div class="idea-stage">
+            <button class="idea-nav prev" type="button" aria-label="上一张">‹</button>
+            <img data-imgs='["./assets/img/ref-09.jpg","./assets/img/ref-10.jpg"]' src="./assets/img/ref-09.jpg" alt="盘扣上衣 + 日常裤装">
+            <button class="idea-nav next" type="button" aria-label="下一张">›</button>
+            <div class="idea-dots"></div>
+          </div>
+          <figcaption class="idea-cap"><h4>盘扣上衣 + 日常裤装</h4><p>适合古着、通勤、citywalk 场景，门槛更低。</p></figcaption>
+        </figure>
       </div>
     </section>
 
@@ -310,6 +343,16 @@
     function showStatus(text){ status.textContent=text; status.classList.add('show'); clearTimeout(window.__copyTimer); window.__copyTimer=setTimeout(()=>status.classList.remove('show'),1500); }
     async function copyText(text){ try{ await navigator.clipboard.writeText(text); showStatus('已复制'); }catch(e){ const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); showStatus('已复制'); }}
     document.querySelectorAll('[data-copy]').forEach(btn=>btn.addEventListener('click',()=>copyText(btn.dataset.copy)));
+
+    // 穿搭思路：每卡 2 图切换
+    document.querySelectorAll('[data-idea]').forEach(card=>{
+      const img=card.querySelector('img'); const imgs=JSON.parse(img.getAttribute('data-imgs')); const dots=card.querySelector('.idea-dots');
+      let i=0;
+      dots.innerHTML=imgs.map((_,n)=>`<span class="d ${n===0?'active':''}"></span>`).join('');
+      const render=()=>{ img.src=imgs[i]; dots.querySelectorAll('.d').forEach((d,n)=>d.classList.toggle('active',n===i)); };
+      card.querySelector('.idea-nav.prev').addEventListener('click',()=>{ i=(i-1+imgs.length)%imgs.length; render(); });
+      card.querySelector('.idea-nav.next').addEventListener('click',()=>{ i=(i+1)%imgs.length; render(); });
+    });
 
     // 单品示范 tab
     const itemTabs=[...document.querySelectorAll('.item-tab')];
