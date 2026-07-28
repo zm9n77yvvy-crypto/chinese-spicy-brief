@@ -56,9 +56,19 @@
 
     /* 花鸟/缠枝角饰 附着于 intro 卡片 */
     .intro-card{position:relative;overflow:hidden}
-    .intro-card .cn-floral{position:absolute;width:190px;height:190px;opacity:.5;pointer-events:none}
+    .intro-card .cn-floral{position:absolute;width:190px;height:190px;opacity:.5;pointer-events:none;z-index:2}
     .intro-card .cn-floral.f1{top:-30px;right:-28px}
     .intro-card .cn-floral.f2{bottom:-42px;left:-40px;transform:rotate(180deg);opacity:.38}
+
+    /* 头图图文并排版式 */
+    .intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,4vw,44px);align-items:center;position:relative;z-index:1}
+    .intro-copy{min-width:0}
+    .hero-figure{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 22px 54px rgba(94,25,31,.28);border:3px solid rgba(214,165,68,.55);aspect-ratio:3/4;background:#241515}
+    .hero-figure img{width:100%;height:100%;object-fit:cover;display:block}
+    .hero-figure::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,240,225,.35);border-radius:23px;background:linear-gradient(180deg,transparent 62%,rgba(36,21,21,.28))}
+    .hero-figure .hero-cap{position:absolute;left:14px;bottom:12px;z-index:2;color:#fff;font-weight:1000;font-size:15px;letter-spacing:.06em;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+    .hero-figure .cn-corner{z-index:3;opacity:.9}
+    @media (max-width:760px){.intro-grid{grid-template-columns:1fr}.hero-figure{max-width:420px;margin:6px auto 0}}
 
     /* 分区之间的祥云小分隔 */
     .cn-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:6px auto 0;max-width:980px;color:var(--red);opacity:.6}
@@ -129,10 +139,22 @@
         <svg class="cn-floral f1" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#c5162e" stroke-width="2.4" stroke-linecap="round"><path d="M200 20 C150 30 120 60 110 110"/><path d="M170 26 c-14 -6 -26 6 -20 20 c14 6 26 -6 20 -20z" fill="#d6a544" stroke="#c48f2a"/><path d="M140 52 c-14 -6 -26 6 -20 20 c14 6 26 -6 20 -20z" fill="#f2d79a" stroke="#c48f2a"/><path d="M118 86 c-12 -5 -22 5 -17 17 c12 5 22 -5 17 -17z" fill="#e8bcc2" stroke="#c5162e"/><circle cx="156" cy="38" r="3" fill="#c5162e" stroke="none"/><path d="M186 60 c6 -10 20 -8 22 4" /><path d="M150 96 q22 -8 40 4"/></g></svg>
         <svg class="cn-floral f2" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#c5162e" stroke-width="2.4" stroke-linecap="round"><path d="M200 20 C150 30 120 60 110 110"/><path d="M170 26 c-14 -6 -26 6 -20 20 c14 6 26 -6 20 -20z" fill="#d6a544" stroke="#c48f2a"/><path d="M140 52 c-14 -6 -26 6 -20 20 c14 6 26 -6 20 -20z" fill="#f2d79a" stroke="#c48f2a"/><circle cx="156" cy="38" r="3" fill="#c5162e" stroke="none"/></g></svg>
         <span class="label">#穿搭暗号对一下  #中式辣感</span>
-        <h1 class="title">穿搭暗号<br><span>对一下</span></h1>
-        <p class="lead">这次活动想看的不是“怎么穿好看”，而是你如何把真正热爱的兴趣、身份和圈层，通过穿搭表达出来。国风、古着、亚文化、追星、二次元……都可以成为你的穿搭语言。</p>
-        <div class="intro-actions">
-          <a class="btn primary" href="https://doc.weixin.qq.com/forms/ANAAyQcbAAgAfoALgYnABsCNHb34uj0mf" target="_blank" rel="noopener noreferrer">填写返稿收集表</a>
+        <div class="intro-grid">
+          <div class="intro-copy">
+            <h1 class="title">穿搭暗号<br><span>对一下</span></h1>
+            <p class="lead">这次活动想看的不是“怎么穿好看”，而是你如何把真正热爱的兴趣、身份和圈层，通过穿搭表达出来。国风、古着、亚文化、追星、二次元……都可以成为你的穿搭语言。</p>
+            <div class="intro-actions">
+              <a class="btn primary" href="https://doc.weixin.qq.com/forms/ANAAyQcbAAgAfoALgYnABsCNHb34uj0mf" target="_blank" rel="noopener noreferrer">填写返稿收集表</a>
+            </div>
+          </div>
+          <figure class="hero-figure">
+            <svg class="cn-corner tl" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#d6a544" stroke-width="2.4"><path d="M4 4 h20 M4 4 v20 M4 14 h10 v-10 M14 14 h4 v-4"/></g></svg>
+            <svg class="cn-corner tr" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#d6a544" stroke-width="2.4"><path d="M4 4 h20 M4 4 v20 M4 14 h10 v-10 M14 14 h4 v-4"/></g></svg>
+            <svg class="cn-corner bl" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#d6a544" stroke-width="2.4"><path d="M4 4 h20 M4 4 v20 M4 14 h10 v-10 M14 14 h4 v-4"/></g></svg>
+            <svg class="cn-corner br" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#d6a544" stroke-width="2.4"><path d="M4 4 h20 M4 4 v20 M4 14 h10 v-10 M14 14 h4 v-4"/></g></svg>
+            <img src="./assets/img/hero.jpg" alt="中式辣感穿搭头图：金底仙鹤屏风前的黑金旗袍红发女孩">
+            <figcaption class="hero-cap">#中式辣感</figcaption>
+          </figure>
         </div>
       </div>
     </section>
