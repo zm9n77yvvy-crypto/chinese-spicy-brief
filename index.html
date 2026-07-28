@@ -31,6 +31,51 @@
     @media (max-width:860px){.navlinks{display:none}.intro{padding-top:48px}.section-head{display:block}.format-card,.look-wrap{grid-template-columns:1fr}.look-menu{grid-template-columns:1fr 1fr}.look-image{height:min(72vh,620px);min-height:520px}.mobile-cta{display:flex}.spacer{height:74px}}
     @media (max-width:560px){.wrap{padding:0 14px}.intro-card{padding:24px;border-radius:28px}.title{font-size:52px}.rule{grid-template-columns:44px 1fr;padding:15px}.rule-num{width:44px;height:44px;border-radius:14px}.copy-card{align-items:flex-start;flex-direction:column}.copy-btn{width:100%}.look-menu{grid-template-columns:1fr}.look-image{height:540px;min-height:540px}.look-info{display:block}.switcher{margin-top:14px}.format-visual{min-height:340px}.nav{top:8px}.brand{font-size:14px}}
     @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+    /* ===== 中式装饰系统 ===== */
+    /* 缠枝刺绣底纹（极淡，铺满背景） */
+    body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23c5162e' stroke-width='1.4'%3E%3Cpath d='M80 10 C60 30 60 55 80 75 C100 55 100 30 80 10 Z'/%3E%3Cpath d='M80 75 C60 95 60 120 80 140 C100 120 100 95 80 75 Z'/%3E%3Ccircle cx='80' cy='42' r='6'/%3E%3Ccircle cx='80' cy='108' r='6'/%3E%3Cpath d='M10 80 C30 60 55 60 75 80 C55 100 30 100 10 80 Z'/%3E%3Cpath d='M85 80 C105 60 130 60 150 80 C130 100 105 100 85 80 Z'/%3E%3C/g%3E%3C/svg%3E");background-size:200px 200px}
+
+    /* 装饰性 SVG 通用 */
+    .cn-deco{pointer-events:none;display:block}
+    .cn-cloudband{width:100%;max-width:980px;margin:8px auto 0;padding:0 18px;display:block}
+    .cn-cloudband svg{width:100%;height:auto;display:block;filter:drop-shadow(0 6px 14px rgba(197,22,46,.14))}
+
+    /* 回纹边框（雷纹）用于分区标题 */
+    .cn-frame{position:relative}
+    .cn-corner{position:absolute;width:38px;height:38px;opacity:.85}
+    .cn-corner.tl{top:-6px;left:-6px}
+    .cn-corner.tr{top:-6px;right:-6px;transform:scaleX(-1)}
+    .cn-corner.bl{bottom:-6px;left:-6px;transform:scaleY(-1)}
+    .cn-corner.br{bottom:-6px;right:-6px;transform:scale(-1,-1)}
+
+    /* 印章角标（分区标题前） */
+    .cn-seal{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--red),var(--red-dark));color:#fff5ec;font-weight:1000;font-size:13px;line-height:1.05;text-align:center;box-shadow:0 8px 18px rgba(197,22,46,.28);border:2px solid rgba(255,240,225,.5);letter-spacing:0;transform:rotate(-4deg);flex:0 0 auto}
+    .section-head .cn-seal{margin-right:2px}
+    .head-left{display:flex;align-items:center;gap:12px}
+
+    /* 花鸟/缠枝角饰 附着于 intro 卡片 */
+    .intro-card{position:relative;overflow:hidden}
+    .intro-card .cn-floral{position:absolute;width:190px;height:190px;opacity:.5;pointer-events:none}
+    .intro-card .cn-floral.f1{top:-30px;right:-28px}
+    .intro-card .cn-floral.f2{bottom:-42px;left:-40px;transform:rotate(180deg);opacity:.38}
+
+    /* 分区之间的祥云小分隔 */
+    .cn-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:6px auto 0;max-width:980px;color:var(--red);opacity:.6}
+    .cn-divider svg{width:46px;height:auto}
+    .cn-divider .line{height:1px;width:120px;background:linear-gradient(90deg,transparent,rgba(197,22,46,.45),transparent)}
+
+    /* 页脚 */
+    .cn-footer{text-align:center;padding:10px 18px 46px}
+    .cn-footer svg{width:min(520px,86%);height:auto;opacity:.8}
+    .cn-footer p{margin:10px 0 0;color:var(--muted);font-weight:800;letter-spacing:.05em;font-size:13px}
+
+    /* 卡片左上回纹小记 */
+    .rule{position:relative}
+    .look-stage{position:relative}
+    .look-stage .cn-corner{z-index:3;opacity:.7}
+
+    @media (max-width:560px){.intro-card .cn-floral{width:130px;height:130px}.cn-corner{width:30px;height:30px}}
   </style>
 </head>
 <body>
@@ -41,9 +86,48 @@
     <button type="button" data-copy="#穿搭暗号对一下 #中式辣感">复制话题</button>
   </nav>
 
+  <!-- 祥云双龙戏珠装饰带 -->
+  <div class="cn-cloudband cn-deco" aria-hidden="true">
+    <svg viewBox="0 0 980 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="dragGold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#e7be5f"/><stop offset="1" stop-color="#c48f2a"/>
+        </linearGradient>
+      </defs>
+      <g>
+        <circle cx="490" cy="60" r="16" fill="#c5162e"/>
+        <circle cx="490" cy="60" r="16" fill="none" stroke="url(#dragGold)" stroke-width="2.5"/>
+        <g stroke="#d6a544" stroke-width="2" stroke-linecap="round">
+          <path d="M490 34 v-10 M490 86 v10 M464 60 h-10 M516 60 h10 M472 42 l-7 -7 M508 42 l7 -7 M472 78 l-7 7 M508 78 l7 7"/>
+        </g>
+      </g>
+      <g fill="none" stroke="#c5162e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 78 C120 40 180 96 250 60 C300 34 360 78 430 60"/>
+        <path d="M250 60 C255 46 272 44 280 56" stroke="#d6a544" stroke-width="2.4"/>
+        <path d="M120 66 c-6 -14 8 -22 18 -14" stroke="#d6a544" stroke-width="2.4"/>
+        <path d="M190 74 c-6 -14 8 -22 18 -14" stroke="#d6a544" stroke-width="2.4"/>
+        <path d="M60 78 c-16 -4 -26 8 -20 20 c14 6 26 -4 26 -16" fill="#c5162e"/>
+        <circle cx="420" cy="58" r="3.4" fill="#241515" stroke="none"/>
+      </g>
+      <g fill="none" stroke="#c5162e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(980,0) scale(-1,1)">
+        <path d="M60 78 C120 40 180 96 250 60 C300 34 360 78 430 60"/>
+        <path d="M250 60 C255 46 272 44 280 56" stroke="#d6a544" stroke-width="2.4"/>
+        <path d="M120 66 c-6 -14 8 -22 18 -14" stroke="#d6a544" stroke-width="2.4"/>
+        <path d="M190 74 c-6 -14 8 -22 18 -14" stroke="#d6a544" stroke-width="2.4"/>
+        <path d="M60 78 c-16 -4 -26 8 -20 20 c14 6 26 -4 26 -16" fill="#c5162e"/>
+        <circle cx="420" cy="58" r="3.4" fill="#241515" stroke="none"/>
+      </g>
+      <g fill="none" stroke="#d6a544" stroke-width="2.2" opacity=".9">
+        <path d="M150 100 c0 -12 18 -12 18 0 c10 -8 22 2 16 12 M300 104 c0 -10 16 -10 16 0 c9 -7 20 2 15 11 M664 104 c0 -10 16 -10 16 0 c9 -7 20 2 15 11 M812 100 c0 -12 18 -12 18 0 c10 -8 22 2 16 12"/>
+      </g>
+    </svg>
+  </div>
+
   <main>
     <section class="intro wrap" id="intro">
       <div class="intro-card">
+        <svg class="cn-floral f1" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#c5162e" stroke-width="2.4" stroke-linecap="round"><path d="M200 20 C150 30 120 60 110 110"/><path d="M170 26 c-14 -6 -26 6 -20 20 c14 6 26 -6 20 -20z" fill="#d6a544" stroke="#c48f2a"/><path d="M140 52 c-14 -6 -26 6 -20 20 c14 6 26 -6 20 -20z" fill="#f2d79a" stroke="#c48f2a"/><path d="M118 86 c-12 -5 -22 5 -17 17 c12 5 22 -5 17 -17z" fill="#e8bcc2" stroke="#c5162e"/><circle cx="156" cy="38" r="3" fill="#c5162e" stroke="none"/><path d="M186 60 c6 -10 20 -8 22 4" /><path d="M150 96 q22 -8 40 4"/></g></svg>
+        <svg class="cn-floral f2" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#c5162e" stroke-width="2.4" stroke-linecap="round"><path d="M200 20 C150 30 120 60 110 110"/><path d="M170 26 c-14 -6 -26 6 -20 20 c14 6 26 -6 20 -20z" fill="#d6a544" stroke="#c48f2a"/><path d="M140 52 c-14 -6 -26 6 -20 20 c14 6 26 -6 20 -20z" fill="#f2d79a" stroke="#c48f2a"/><circle cx="156" cy="38" r="3" fill="#c5162e" stroke="none"/></g></svg>
         <span class="label">#穿搭暗号对一下  #中式辣感</span>
         <h1 class="title">穿搭暗号<br><span>对一下</span></h1>
         <p class="lead">这次活动想看的不是“怎么穿好看”，而是你如何把真正热爱的兴趣、身份和圈层，通过穿搭表达出来。国风、古着、亚文化、追星、二次元……都可以成为你的穿搭语言。</p>
@@ -54,7 +138,7 @@
     </section>
 
     <section class="section wrap" id="rules">
-      <div class="section-head"><div><div class="kicker">01 / Rules</div><h2>活动规则</h2></div><p class="desc">发布前确认以下信息，返稿后请及时填写收集表。</p></div>
+      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">活动<br>规则</span><div><div class="kicker">01 / Rules</div><h2>活动规则</h2></div></div><p class="desc">发布前确认以下信息，返稿后请及时填写收集表。</p></div>
       <div class="rule-list">
         <article class="rule important"><div class="rule-num">1</div><div><h3>投稿福利</h3><p>优质内容有机会获得单条 10-50w 曝光专项推流；加码福利包括小红书官方薯定制宣推笔记、活动专属定制单人宣推物料。</p></div></article>
         <article class="rule"><div class="rule-num">2</div><div><h3>活动主题</h3><p>以「兴趣身份」为出发点的穿搭活动，把你在意的东西和热爱的圈层穿出来。</p></div></article>
@@ -65,7 +149,7 @@
     </section>
 
     <section class="section wrap" id="formats">
-      <div class="section-head"><div><div class="kicker">02 / Content formats</div><h2>内容范式</h2></div><p class="desc">优先推荐两类视频脚本：风格反差、气场变身。点击切换查看拍法。</p></div>
+      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">内容<br>范式</span><div><div class="kicker">02 / Content formats</div><h2>内容范式</h2></div></div><p class="desc">优先推荐两类视频脚本：风格反差、气场变身。点击切换查看拍法。</p></div>
       <div class="tabs" role="tablist" aria-label="内容范式切换">
         <button class="tab" role="tab" aria-selected="true" aria-controls="panel-soft-hot" id="tab-soft-hot">浓淡不同自相宜</button>
         <button class="tab" role="tab" aria-selected="false" aria-controls="panel-mean-girl" id="tab-mean-girl">唐人街 mean girl</button>
@@ -85,7 +169,7 @@
     </section>
 
     <section class="section wrap" id="looks">
-      <div class="section-head"><div><div class="kicker">03 / Outfit ideas</div><h2>穿搭</h2></div><p class="desc">每组图片统一展示尺寸；同组两张图可点击左右按钮切换。</p></div>
+      <div class="section-head"><div class="head-left"><span class="cn-seal" aria-hidden="true">穿搭<br>参考</span><div><div class="kicker">03 / Outfit ideas</div><h2>穿搭</h2></div></div><p class="desc">每组图片统一展示尺寸；同组两张图可点击左右按钮切换。</p></div>
       <div class="look-wrap">
         <div class="look-menu" role="tablist" aria-label="穿搭类型切换">
           <button class="look-tab" role="tab" aria-selected="true" data-look="0">改良旗袍 suit<small>大光明 / 盘发</small></button>
@@ -94,6 +178,10 @@
           <button class="look-tab" role="tab" aria-selected="false" data-look="3">盘扣上衣 + 日常裤装<small>低门槛好上手</small></button>
         </div>
         <article class="look-stage" aria-live="polite">
+          <svg class="cn-corner tl" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#c5162e" stroke-width="2.4"><path d="M4 4 h20 M4 4 v20 M4 14 h10 v-10 M14 14 h4 v-4"/></g></svg>
+          <svg class="cn-corner tr" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#c5162e" stroke-width="2.4"><path d="M4 4 h20 M4 4 v20 M4 14 h10 v-10 M14 14 h4 v-4"/></g></svg>
+          <svg class="cn-corner bl" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#c5162e" stroke-width="2.4"><path d="M4 4 h20 M4 4 v20 M4 14 h10 v-10 M14 14 h4 v-4"/></g></svg>
+          <svg class="cn-corner br" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#c5162e" stroke-width="2.4"><path d="M4 4 h20 M4 4 v20 M4 14 h10 v-10 M14 14 h4 v-4"/></g></svg>
           <div class="look-image"><img id="lookImg" src="./assets/img/ref-03.jpg" alt="改良旗袍 suit 穿搭参考"></div>
           <div class="look-info">
             <div><h3 id="lookTitle">改良旗袍 suit + 大光明/盘发</h3><p id="lookText">适合走强气场、拽感、电影感路线。</p><div class="dots" id="lookDots" aria-hidden="true"><span class="dot active"></span><span class="dot "></span></div></div>
@@ -104,6 +192,22 @@
     </section>
     <div class="spacer"></div>
   </main>
+
+  <!-- 页脚：祥云 + 花窗 -->
+  <footer class="cn-footer cn-deco" aria-hidden="false">
+    <svg viewBox="0 0 520 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g fill="none" stroke="#c5162e" stroke-width="2" stroke-linecap="round">
+        <path d="M20 60 h180 M320 60 h180" stroke="#d6a544"/>
+        <path d="M120 60 c0 -14 20 -14 20 0 c11 -9 24 2 18 13 M380 60 c0 -14 20 -14 20 0 c11 -9 24 2 18 13" stroke="#d6a544"/>
+      </g>
+      <g transform="translate(236,20)">
+        <rect x="0" y="0" width="48" height="48" rx="8" fill="none" stroke="#c5162e" stroke-width="2.4"/>
+        <path d="M24 4 v40 M4 24 h40 M12 12 l24 24 M36 12 l-24 24" fill="none" stroke="#d6a544" stroke-width="1.6"/>
+        <circle cx="24" cy="24" r="7" fill="#c5162e"/>
+      </g>
+    </svg>
+    <p>穿搭暗号对一下 · 中式辣感</p>
+  </footer>
 
   <div class="mobile-cta"><a class="btn primary" href="https://doc.weixin.qq.com/forms/ANAAyQcbAAgAfoALgYnABsCNHb34uj0mf" target="_blank" rel="noopener noreferrer">填写返稿收集表</a></div>
   <script>
