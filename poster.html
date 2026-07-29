@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>穿搭暗号对一下｜中式辣感活动 brief</title>
+  <style>
+    :root{
+      --ink:#241515;
+      --muted:#735f5a;
+      --paper:#fff8f1;
+      --card:#fffdf9;
+      --red:#c5162e;
+      --red-dark:#8f0718;
+      --gold:#d6a544;
+      --line:rgba(36,21,21,.12);
+      --shadow:0 18px 48px rgba(94,25,31,.12);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,#fff8f1 0%,#fffdf9 52%,#fff3ed 100%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.65;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 8% 8%,rgba(197,22,46,.10),transparent 30%),radial-gradient(circle at 90% 12%,rgba(214,165,68,.18),transparent 28%);z-index:-1}
+    a{color:inherit}.wrap{width:min(980px,100%);margin:0 auto;padding:0 18px}.nav{position:sticky;top:12px;z-index:20;width:min(980px,calc(100% - 24px));margin:12px auto 0;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px 10px 16px;background:rgba(255,253,249,.86);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:999px;box-shadow:0 10px 30px rgba(60,20,20,.08)}
+    .brand{font-weight:900;letter-spacing:-.03em}.navlinks{display:flex;gap:4px}.nav a,.nav button{min-height:44px;border:0;background:transparent;border-radius:999px;padding:0 14px;font-weight:800;color:#5a302f;text-decoration:none;cursor:pointer}.nav a:hover,.nav button:hover{background:#ffe8df;color:var(--red-dark)}
+    .copy-status{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(18px);opacity:0;pointer-events:none;background:#241515;color:#fff;border-radius:999px;padding:11px 16px;font-weight:800;box-shadow:var(--shadow);transition:.22s;z-index:50}.copy-status.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    .section{padding:42px 0}.intro{padding:76px 0 44px}.intro-card{background:rgba(255,253,249,.82);border:1px solid var(--line);border-radius:34px;padding:clamp(24px,5vw,52px);box-shadow:var(--shadow)}.label{display:inline-flex;min-height:34px;align-items:center;border-radius:999px;padding:0 12px;background:#ffe9df;color:var(--red-dark);font-size:13px;font-weight:900;letter-spacing:.04em}.title{font-size:clamp(34px,5.2vw,45px);font-weight:900;line-height:1.2;letter-spacing:.02em;margin:18px 0 18px}.title span{color:var(--red);text-shadow:3px 3px 0 #ffd7c2}.lead{font-size:16px;line-height:1.75;color:#49302d;max-width:760px;margin:0}.intro-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.btn{min-height:48px;border:0;border-radius:999px;padding:0 18px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:900;text-decoration:none;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s}.btn:hover{transform:translateY(-2px)}.btn.primary{background:var(--red);color:#fff;box-shadow:0 14px 28px rgba(197,22,46,.24)}.btn.secondary{background:#fff;color:var(--red-dark);border:1px solid rgba(197,22,46,.18)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}.kicker{font-size:13px;font-weight:1000;color:var(--red);letter-spacing:.08em;text-transform:uppercase}.section h2{font-size:28px;font-weight:900;line-height:1.2;margin:5px 0 0;letter-spacing:.02em}.desc{max-width:600px;color:var(--muted);margin:8px 0 0}.card{background:rgba(255,253,249,.9);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}.rule-list{display:grid;gap:12px}.rule{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px}.rule-num{width:54px;height:54px;border-radius:18px;background:#241515;color:#fff;display:grid;place-items:center;font-weight:1000}.rule h3{margin:0 0 6px;font-size:20px;line-height:1.2}.rule p{margin:0;color:var(--muted);font-size:15px;line-height:1.7}.rule-sub{display:grid;gap:8px;margin-top:2px}.rule-sub .item{display:grid;gap:2px}.rule-sub .item b{font-size:15px;color:var(--red-dark)}.rule-sub .item span{color:var(--muted);font-size:15px;line-height:1.7}.rule.important .rule-num{background:var(--red)}.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.tag{display:inline-flex;align-items:center;min-height:34px;padding:0 12px;border-radius:999px;background:#fff0e8;color:var(--red-dark);font-weight:900;border:1px solid rgba(197,22,46,.12)}.copy-card{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px dashed rgba(197,22,46,.35);border-radius:18px;padding:12px;margin-top:12px}.copy-card code{font-family:inherit;color:var(--red-dark);font-weight:900}.copy-btn{min-width:80px;min-height:44px;border:0;border-radius:14px;background:#241515;color:#fff;font-weight:900;cursor:pointer}.copy-btn:hover{background:var(--red-dark)}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}.tab{min-height:44px;border-radius:999px;border:1px solid rgba(197,22,46,.18);background:#fff8f3;color:#5b3131;padding:0 15px;font-weight:900;cursor:pointer}.tab[aria-selected="true"]{background:var(--red);color:#fff;border-color:var(--red);box-shadow:0 12px 24px rgba(197,22,46,.20)}.panel{display:none}.panel.active{display:block;animation:fadeUp .24s ease both}@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}.format-card{display:grid;grid-template-columns:.7fr 1.3fr;gap:18px;align-items:start}.format-visual{border-radius:18px;background:#fff;border:1px solid var(--line);overflow:hidden;position:relative;text-decoration:none;color:inherit;display:block;transition:transform .18s,box-shadow .18s}a.format-visual:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(197,22,46,.18)}.format-visual img{width:100%;height:auto;max-height:320px;object-fit:cover;display:block}.format-visual span{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 16px;color:var(--ink);font-weight:1000;font-size:17px;line-height:1.3;background:#fff7f1;border-top:1px solid rgba(197,22,46,.1)}.format-visual span::after{content:"查看笔记 →";color:var(--red);font-size:14px;font-weight:900;white-space:nowrap}.steps{counter-reset:item;display:grid;gap:12px}.step{counter-increment:item;display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;padding:14px;border-radius:18px;background:#fff7f1;border:1px solid rgba(197,22,46,.1)}.step::before{content:counter(item);width:40px;height:40px;border-radius:50%;background:#241515;color:#fff;display:grid;place-items:center;font-weight:1000}.mini{font-size:13px;color:var(--muted);font-weight:700}
+    .look-wrap{display:block}.look-menu{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 16px}.look-tab{min-height:56px;text-align:center;border:1px solid rgba(197,22,46,.2);background:#fff8f3;border-radius:999px;padding:8px 22px;font-weight:900;font-size:19px;cursor:pointer;color:#3d2422;line-height:1.15}.look-tab small{display:block;color:var(--muted);font-weight:700;font-size:13px;margin-top:2px}.look-tab[aria-selected="true"]{background:var(--red);color:#fff;border-color:var(--red);box-shadow:0 12px 24px rgba(197,22,46,.20)}.look-tab[aria-selected="true"] small{color:rgba(255,255,255,.8)}.look-stage{background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}.look-image{position:relative;height:min(72vh,680px);min-height:560px;background:#f7ebe5}.look-image img{width:100%;height:100%;object-fit:contain;display:block}.look-info{padding:18px;display:flex;align-items:center;justify-content:space-between;gap:14px}.look-info h3{margin:0;font-size:22px;line-height:1.2}.look-info p{margin:6px 0 0;color:var(--muted)}.switcher{display:flex;gap:8px;flex:0 0 auto}.icon-btn{width:44px;height:44px;border:0;border-radius:50%;background:#241515;color:#fff;font-size:22px;font-weight:900;cursor:pointer}.icon-btn:hover{background:var(--red-dark)}.dots{display:flex;gap:6px;margin-top:10px}.dot{width:8px;height:8px;border-radius:50%;background:#e5c8bf}.dot.active{background:var(--red)}
+    .mobile-cta{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:rgba(36,21,21,.94);backdrop-filter:blur(18px);border-radius:24px;padding:10px;box-shadow:0 20px 50px rgba(0,0,0,.20)}.mobile-cta a{width:100%;color:#fff;text-decoration:none}.spacer{height:38px}
+    .final-cta{max-width:980px;margin:12px auto 0;padding:0 18px}
+    .final-cta-card{background:linear-gradient(135deg,var(--red),var(--red-dark));color:#fff;border-radius:28px;padding:clamp(22px,4vw,36px);text-align:center;box-shadow:0 22px 54px rgba(197,22,46,.28);border:2px solid rgba(255,240,225,.35)}
+    .final-cta-card h2{margin:0 0 10px;font-size:22px;font-weight:900;line-height:1.35;letter-spacing:.02em;color:#fff}
+    .final-cta-card p{margin:0 auto;max-width:600px;font-size:15px;line-height:1.7;color:rgba(255,246,240,.92)}
+    .final-cta-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:22px}
+    .final-cta .btn.light{background:#fff;color:var(--red-dark)}
+    .final-cta .btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.7)}
+    @media (max-width:860px){.navlinks{display:none}.intro{padding-top:48px}.section-head{display:block}.format-card,.look-wrap{grid-template-columns:1fr}.look-menu{grid-template-columns:1fr 1fr}.look-image{height:min(72vh,620px);min-height:520px}.mobile-cta{display:flex}.spacer{height:74px}}
+    @media (max-width:560px){.look-tab{font-size:16px;padding:7px 16px}.wrap{padding:0 14px}.intro-card{padding:24px;border-radius:28px}.title{font-size:40px}.rule{grid-template-columns:44px 1fr;padding:15px}.rule-num{width:44px;height:44px;border-radius:14px}.copy-card{align-items:flex-start;flex-direction:column}.copy-btn{width:100%}.look-menu{grid-template-columns:1fr}.look-image{height:540px;min-height:540px}.look-info{display:block}.switcher{margin-top:14px}.format-visual{min-height:auto}.nav{top:8px}.brand{font-size:14px}}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+    /* ===== 中式装饰系统 ===== */
+    /* 缠枝刺绣底纹（极淡，铺满背景） */
+    body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23c5162e' stroke-width='1.4'%3E%3Cpath d='M80 10 C60 30 60 55 80 75 C100 55 100 30 80 10 Z'/%3E%3Cpath d='M80 75 C60 95 60 120 80 140 C100 120 100 95 80 75 Z'/%3E%3Ccircle cx='80' cy='42' r='6'/%3E%3Ccircle cx='80' cy='108' r='6'/%3E%3Cpath d='M10 80 C30 60 55 60 75 80 C55 100 30 100 10 80 Z'/%3E%3Cpath d='M85 80 C105 60 130 60 150 80 C130 100 105 100 85 80 Z'/%3E%3C/g%3E%3C/svg%3E");background-size:200px 200px}
+
+    /* 装饰性 SVG 通用 */
+    .cn-deco{pointer-events:none;display:block}
+
+    /* 回纹边框（雷纹）用于分区标题 */
+    .cn-frame{position:relative}
+    .cn-corner{position:absolute;width:38px;height:38px;opacity:.85}
+    .cn-corner.tl{top:-6px;left:-6px}
+    .cn-corner.tr{top:-6px;right:-6px;transform:scaleX(-1)}
+    .cn-corner.bl{bottom:-6px;left:-6px;transform:scaleY(-1)}
+    .cn-corner.br{bottom:-6px;right:-6px;transform:scale(-1,-1)}
+
+    /* 印章角标（分区标题前） */
+    .cn-seal{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--red),var(--red-dark));color:#fff5ec;font-weight:1000;font-size:13px;line-height:1.05;text-align:center;box-shadow:0 8px 18px rgba(197,22,46,.28);border:2px solid rgba(255,240,225,.5);letter-spacing:0;transform:rotate(-4deg);flex:0 0 auto}
+    .section-head .cn-seal{margin-right:2px}
+    .cn-seal.seal-num{font-size:26px;line-height:1}
+    .head-left{display:flex;align-items:center;gap:12px}
+
+    /* 花鸟/缠枝角饰 附着于 intro 卡片 */
+    .intro-card{position:relative;overflow:hidden}
+    .intro-card .cn-floral{position:absolute;width:190px;height:190px;opacity:.5;pointer-events:none;z-index:2}
+    .intro-card .cn-floral.f1{top:-30px;right:-28px}
+    .intro-card .cn-floral.f2{bottom:-42px;left:-40px;transform:rotate(180deg);opacity:.38}
+
+    /* 头图图文并排版式 */
+    .intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,4vw,44px);align-items:center;position:relative;z-index:1}
+    .title.oneline{white-space:nowrap;font-size:clamp(30px,4.6vw,45px);font-weight:900;letter-spacing:.02em}
+    @media (max-width:760px){.title.oneline{font-size:clamp(32px,8vw,44px)}}
+    @media (max-width:560px){.title.oneline{font-size:clamp(28px,8vw,40px)}}
+    .intro-copy{min-width:0}
+    .hero-figure{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 22px 54px rgba(94,25,31,.28);border:3px solid rgba(214,165,68,.55);aspect-ratio:3/4;background:#241515}
+    .hero-figure img{width:100%;height:100%;object-fit:cover;display:block}
+    .hero-figure::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,240,225,.35);border-radius:23px;background:linear-gradient(180deg,transparent 62%,rgba(36,21,21,.28))}
+    .hero-figure .hero-cap{position:absolute;left:14px;bottom:12px;z-index:2;color:#fff;font-weight:1000;font-size:15px;letter-spacing:.06em;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+    .hero-figure .cn-corner{z-index:3;opacity:.9}
+    @media (max-width:760px){.intro-grid{grid-template-columns:1fr}.hero-figure{max-width:420px;margin:6px auto 0}}
+
+    /* 置顶笔记卡 */
+    .pinned{max-width:980px;margin:16px auto 0;padding:0 18px}
+    .pinned-card{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:22px;padding:12px 14px;margin-top:16px;box-shadow:0 8px 22px rgba(94,25,31,.10);text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s}
+    .pinned-card:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(197,22,46,.16)}
+    .pinned-thumb{width:76px;height:100px;flex:0 0 auto;border-radius:14px;overflow:hidden;background:#f7ebe5;border:2px solid rgba(214,165,68,.5)}
+    .pinned-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .pinned-body{min-width:0;flex:1}
+    .pinned-tag{display:inline-flex;align-items:center;gap:5px;min-height:26px;padding:0 10px;border-radius:999px;background:var(--red);color:#fff;font-size:12px;font-weight:900;letter-spacing:.04em}
+    .pinned-body h4{margin:4px 0 0;font-size:14px;line-height:1.35;font-weight:800;color:var(--ink)}
+    .pinned-card .go{flex:0 0 auto;color:var(--red);font-weight:900;font-size:14px;white-space:nowrap}
+
+    /* 圈层简介 */
+    .zone{padding:34px 0 8px}
+    .zone-card{background:linear-gradient(135deg,rgba(197,22,46,.05),rgba(214,165,68,.08));border:1px solid var(--line);border-radius:28px;padding:clamp(22px,4vw,36px);box-shadow:var(--shadow);text-align:left;position:relative;overflow:hidden}
+    .zone-card .zone-h{margin:0 0 10px;font-size:22px;font-weight:900;letter-spacing:.02em;color:var(--red-dark)}
+    .zone-card p{max-width:720px;margin:0;font-size:16px;color:#49302d;line-height:1.85}
+    .zone-card .invite-inline{display:inline-block;margin-top:8px;font-weight:900;color:var(--red)}
+
+    /* 内容方向：行式布局 */
+    .fmt-row{display:grid;grid-template-columns:210px 1fr;gap:16px;align-items:stretch;background:rgba(255,253,249,.9);border:1px solid var(--line);border-radius:22px;padding:14px;box-shadow:var(--shadow);margin-bottom:14px}
+    .fmt-left{background:linear-gradient(135deg,var(--red),var(--red-dark));border-radius:16px;padding:16px 18px;color:#fff;display:flex;flex-direction:column;justify-content:center;gap:6px}
+    .fmt-left .k{font-size:12px;font-weight:900;letter-spacing:.06em;opacity:.85}
+    .fmt-left h3{margin:0;font-size:20px;line-height:1.25;color:#fff}
+    .fmt-right{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;text-decoration:none;color:inherit}
+    .fmt-thumb{width:96px;height:128px;flex:0 0 auto;border-radius:12px;overflow:hidden;background:#f7ebe5;border:2px solid rgba(214,165,68,.5)}
+    .fmt-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .fmt-body{min-width:0}
+    .fmt-body h4{margin:0 0 6px;font-size:16px;line-height:1.4}
+    .fmt-body p{margin:0 0 8px;color:var(--muted);font-size:14px;line-height:1.6}
+    .fmt-body .go{color:var(--red);font-weight:900;font-size:14px}
+    @media (max-width:640px){.fmt-row{grid-template-columns:1fr}.fmt-left{padding:12px 14px}.fmt-right{grid-template-columns:84px 1fr}.fmt-thumb{width:84px;height:112px}}
+
+    /* 穿搭思路：4 卡平铺，每卡 2 图可切换 */
+    .idea-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .idea{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 12px 30px rgba(94,25,31,.12)}
+    .idea-stage{position:relative;aspect-ratio:4/5;background:#f7ebe5}
+    .idea-stage img{width:100%;height:100%;object-fit:cover;display:block}
+    .idea-nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border:0;border-radius:50%;background:rgba(36,21,21,.6);color:#fff;font-size:22px;font-weight:900;cursor:pointer;display:grid;place-items:center;z-index:2}
+    .idea-nav:hover{background:var(--red-dark)}
+    .idea-nav.prev{left:12px}.idea-nav.next{right:12px}
+    .idea-dots{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:6px;z-index:2}
+    .idea-dots .d{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.6);box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+    .idea-dots .d.active{background:var(--red)}
+    .idea-cap{padding:16px 18px}
+    .idea-cap h4{margin:0 0 5px;font-size:19px;line-height:1.3}
+    .idea-cap p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+    @media (max-width:640px){.idea-grid{grid-template-columns:1fr}}
+    .cn-plum{display:flex;align-items:center;justify-content:center;gap:14px;max-width:980px;margin:6px auto 0;padding:0 18px}
+    .cn-plum .line{height:1px;flex:1;max-width:300px;background:linear-gradient(90deg,transparent,rgba(197,22,46,.4),transparent)}
+    .cn-plum svg{width:34px;height:auto;flex:0 0 auto}
+
+    /* 分区之间的祥云小分隔 */
+    .cn-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:6px auto 0;max-width:980px;color:var(--red);opacity:.6}
+    .cn-divider svg{width:46px;height:auto}
+    .cn-divider .line{height:1px;width:120px;background:linear-gradient(90deg,transparent,rgba(197,22,46,.45),transparent)}
+
+    /* 页脚 */
+    .cn-footer{text-align:center;padding:10px 18px 46px}
+    .cn-footer svg{width:min(520px,86%);height:auto;opacity:.8}
+    .cn-footer p{margin:10px 0 0;color:var(--muted);font-weight:800;letter-spacing:.05em;font-size:13px}
+
+    /* 卡片左上回纹小记 */
+    .rule{position:relative}
+    .look-stage{position:relative}
+    .look-stage .cn-corner{z-index:3;opacity:.7}
+
+    @media (max-width:560px){.intro-card .cn-floral{width:130px;height:130px}.cn-corner{width:30px;height:30px}}
+
+    /* 单品示范：一排三图 + tab */
+    .item-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+    .item-tab{min-height:46px;border-radius:999px;border:1px solid rgba(197,22,46,.2);background:#fff8f3;color:#5b3131;padding:0 20px;font-weight:900;cursor:pointer}
+    .item-tab[aria-selected="true"]{background:var(--red);color:#fff;border-color:var(--red);box-shadow:0 12px 24px rgba(197,22,46,.20)}
+    .item-panel{display:none}
+    .item-panel.active{display:block;animation:fadeUp .24s ease both}
+    .item-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .item-figure{position:relative;border-radius:18px;overflow:hidden;background:#f7ebe5;border:1px solid var(--line);box-shadow:0 10px 26px rgba(94,25,31,.10);aspect-ratio:3/4}
+    .item-figure img{width:100%;height:100%;object-fit:cover;display:block}
+    @media (max-width:760px){.item-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:480px){.item-grid{grid-template-columns:1fr}}
+  </style>
+
+  <style>
+    /* ===== 图片版覆盖样式 ===== */
+    body::before,body::after{position:absolute}
+    .idea-grid{grid-template-columns:repeat(2,1fr)}
+    .idea-imgs{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+    .idea-shot{aspect-ratio:3/4;background:#f7ebe5;overflow:hidden}
+    .idea-shot img{width:100%;height:100%;object-fit:cover;display:block}
+    .item-group-title{font-size:18px;font-weight:900;color:var(--red-dark);margin:6px 0 12px}
+    .item-panel-static{display:block;margin-bottom:22px}
+    @media (max-width:640px){.idea-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <!-- 梅花装饰带 -->
+  <div class="cn-plum cn-deco" aria-hidden="true">
+    <span class="line"></span>
+    <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g><g fill="#c5162e" opacity=".92"><circle cx="30" cy="14" r="8"/><circle cx="45" cy="25" r="8"/><circle cx="39" cy="43" r="8"/><circle cx="21" cy="43" r="8"/><circle cx="15" cy="25" r="8"/></g><circle cx="30" cy="30" r="5" fill="#d6a544"/><g stroke="#d6a544" stroke-width="1.4" stroke-linecap="round"><path d="M30 30 l0 -8 M30 30 l7 4 M30 30 l-7 4 M30 30 l5 -6 M30 30 l-5 -6"/></g></g></svg>
+    <span class="line"></span>
+  </div>
+
+  <main>
+    <section class="intro wrap" id="intro">
+      <div class="intro-card">
+        <svg class="cn-floral f1" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#c5162e" stroke-width="2.4" stroke-linecap="round"><path d="M200 20 C150 30 120 60 110 110"/><path d="M170 26 c-14 -6 -26 6 -20 20 c14 6 26 -6 20 -20z" fill="#d6a544" stroke="#c48f2a"/><path d="M140 52 c-14 -6 -26 6 -20 20 c14 6 26 -6 20 -20z" fill="#f2d79a" stroke="#c48f2a"/><path d="M118 86 c-12 -5 -22 5 -17 17 c12 5 22 -5 17 -17z" fill="#e8bcc2" stroke="#c5162e"/><circle cx="156" cy="38" r="3" fill="#c5162e" stroke="none"/><path d="M186 60 c6 -10 20 -8 22 4" /><path d="M150 96 q22 -8 40 4"/></g></svg>
+        <svg class="cn-floral f2" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#c5162e" stroke-width="2.4" stroke-linecap="round"><path d="M200 20 C150 30 120 60 110 110"/><path d="M170 26 c-14 -6 -26 6 -20 20 c14 6 26 -6 20 -20z" fill="#d6a544" stroke="#c48f2a"/><path d="M140 52 c-14 -6 -26 6 -20 20 c14 6 26 -6 20 -20z" fill="#f2d79a" stroke="#c48f2a"/><circle cx="156" cy="38" r="3" fill="#c5162e" stroke="none"/></g></svg>
+        <span class="label">#穿搭暗号对一下  #中式辣感</span>
+        <div class="intro-grid">
+          <div class="intro-copy">
+            <h1 class="title oneline">穿搭暗号<span>对一下</span></h1>
+            <p class="lead">这次活动想看的不是“怎么穿好看”，而是你如何把真正热爱的兴趣、身份和圈层，通过穿搭表达出来。国风、古着、亚文化、追星、二次元……都可以成为你的穿搭语言。</p>
+            <div class="intro-actions">
+              <a class="btn primary" href="https://fe.xiaohongshu.com/ditto/vincent/fb217b46c0a64dc89b6a14b6d4917338?naviHidden=yes&fullscreen=true&source=wowcard" target="_blank" rel="noopener noreferrer">进入活动主页面</a>
+              <a class="btn primary" href="https://doc.weixin.qq.com/forms/ANAAyQcbAAgAfoALgYnABsCNHb34uj0mf" target="_blank" rel="noopener noreferrer">填写返稿收集表</a>
+            </div>
+            <a class="pinned-card" href="https://www.xiaohongshu.com/explore/6a5624c8000000001101e173" target="_blank" rel="noopener noreferrer">
+              <div class="pinned-body">
+                <span class="pinned-tag">📌 官宣笔记</span>
+                <h4>穿搭暗号对一下｜用一件衣服认出自己人</h4>
+              </div>
+            </a>
+          </div>
+          <figure class="hero-figure">
+            <svg class="cn-corner tl" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#d6a544" stroke-width="2.4"><path d="M4 4 h20 M4 4 v20 M4 14 h10 v-10 M14 14 h4 v-4"/></g></svg>
+            <svg class="cn-corner tr" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#d6a544" stroke-width="2.4"><path d="M4 4 h20 M4 4 v20 M4 14 h10 v-10 M14 14 h4 v-4"/></g></svg>
+            <svg class="cn-corner bl" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#d6a544" stroke-width="2.4"><path d="M4 4 h20 M4 4 v20 M4 14 h10 v-10 M14 14 h4 v-4"/></g></svg>
+            <svg class="cn-corner br" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#d6a544" stroke-width="2.4"><path d="M4 4 h20 M4 4 v20 M4 14 h10 v-10 M14 14 h4 v-4"/></g></svg>
+            <img src="./assets/img/hero.jpg" alt="中式辣感穿搭头图：金底仙鹤屏风前的黑金旗袍红发女孩">
+            <figcaption class="hero-cap">#中式辣感</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 一、圈层简介 -->
+    <section class="zone wrap" id="zone">
+      <div class="section-head"><div class="head-left"><span class="cn-seal seal-num" aria-hidden="true">一</span><h2>圈层简介</h2></div></div>
+      <div class="zone-card">
+        <h3 class="zone-h">国风圈层</h3>
+        <p>2026 年中式圈层的新审美——辣感当道。把中式古韵的内敛，和辣感的张扬、酷，撞在一起，碰撞出全新表达，穿出属于自己的中式风格。</p>
+      </div>
+    </section>
+
+    <section class="section wrap" id="rules">
+      <div class="section-head"><div class="head-left"><span class="cn-seal seal-num" aria-hidden="true">二</span><h2>参与方式</h2></div><p class="desc">发布前确认以下信息，返稿后请及时填写收集表。</p></div>
+      <div class="rule-list">
+        <article class="rule important"><div class="rule-num">1</div><div><h3>投稿福利</h3><div class="rule-sub"><div class="item"><b>常规福利</b><span>优质内容有机会获得单条 10-50w 曝光专项推流。</span></div><div class="item"><b>加码福利</b><span>小红书官方薯定制宣推笔记、活动专属定制单人宣推物料。</span></div></div></div></article>
+        <article class="rule"><div class="rule-num">2</div><div><h3>活动主题</h3><p>以「兴趣身份」为出发点的穿搭活动，把你在意的东西和热爱的圈层穿出来。</p></div></article>
+        <article class="rule"><div class="rule-num">3</div><div><h3>活动时间</h3><p>即日起 — 9 月 15 日。</p></div></article>
+        <article class="rule"><div class="rule-num">4</div><div><h3>标题正文</h3><p>推荐出现「中式辣感」相关表达，更容易被运营打捞推流。</p></div></article>
+        <article class="rule"><div class="rule-num">5</div><div><h3>必带话题</h3><div class="tag-row"><span class="tag">#穿搭暗号对一下</span><span class="tag">#中式辣感</span></div></div></article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="formats">
+      <div class="section-head"><div class="head-left"><span class="cn-seal seal-num" aria-hidden="true">三</span><h2>内容方向</h2></div><p class="desc">优先推荐两类视频脚本：风格反差、气场变身。</p></div>
+      <div class="fmt-row">
+        <div class="fmt-left"><span class="k">转场主题</span><h3>浓淡不同自相宜</h3></div>
+        <a class="fmt-right" href="https://www.xiaohongshu.com/explore/6a5b6fe1000000000f011e71" target="_blank" rel="noopener noreferrer">
+          <div class="fmt-thumb"><img src="./assets/img/cover-nongdan.webp" alt="浓淡不同自相宜 笔记封面"></div>
+          <div class="fmt-body"><h4>同一个人，演绎两种浓淡中式风格</h4><p>前半段风格 A（素色清冷新中式），一个转场切到风格 B（浓烈张扬印花旗袍）。</p><span class="go">点击查看示范 →</span></div>
+        </a>
+      </div>
+      <div class="fmt-row">
+        <div class="fmt-left"><span class="k">转场主题</span><h3>唐人街 mean girl</h3></div>
+        <a class="fmt-right" href="https://www.xiaohongshu.com/explore/6a47b01100000000210085cd" target="_blank" rel="noopener noreferrer">
+          <div class="fmt-thumb"><img src="./assets/img/cover-meangirl.webp" alt="唐人街 mean girl 笔记封面"></div>
+          <div class="fmt-body"><h4>素颜随意，到气场全开的中式辣感</h4><p>前半段头顶卷发筒、素颜家居服；后半段换上全妆中式辣感穿搭走向镜头。</p><span class="go">点击查看示范 →</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section wrap" id="looks">
+      <div class="section-head"><div class="head-left"><span class="cn-seal seal-num" aria-hidden="true">四</span><h2>穿搭思路</h2></div></div>
+      <div class="idea-grid">
+        <figure class="idea"><div class="idea-imgs"><div class="idea-shot"><img src="./assets/img/ref-03.jpg" alt="改良旗袍 suit"></div><div class="idea-shot"><img src="./assets/img/ref-04.jpg" alt="改良旗袍 suit"></div></div><figcaption class="idea-cap"><h4>改良旗袍 suit</h4><p>大光明 / 盘发，强气场拽感、电影感。</p></figcaption></figure>
+        <figure class="idea"><div class="idea-imgs"><div class="idea-shot"><img src="./assets/img/ref-05.jpg" alt="改良旗袍 + 裤装"></div><div class="idea-shot"><img src="./assets/img/ref-06.jpg" alt="改良旗袍 + 裤装"></div></div><figcaption class="idea-cap"><h4>改良旗袍 + 裤装</h4><p>把传统廓形穿进日常街头，利落又有冲突感。</p></figcaption></figure>
+        <figure class="idea"><div class="idea-imgs"><div class="idea-shot"><img src="./assets/img/ref-07.jpg" alt="改良旗袍 + 腿袜/靴子"></div><div class="idea-shot"><img src="./assets/img/ref-08.jpg" alt="改良旗袍 + 腿袜/靴子"></div></div><figcaption class="idea-cap"><h4>改良旗袍 + 腿袜/靴子</h4><p>更辣、更亚文化，适合强视觉视频封面。</p></figcaption></figure>
+        <figure class="idea"><div class="idea-imgs"><div class="idea-shot"><img src="./assets/img/ref-09.jpg" alt="盘扣上衣 + 日常裤装"></div><div class="idea-shot"><img src="./assets/img/ref-10.jpg" alt="盘扣上衣 + 日常裤装"></div></div><figcaption class="idea-cap"><h4>盘扣上衣 + 日常裤装</h4><p>适合古着、通勤、citywalk 场景，门槛更低。</p></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section wrap" id="items">
+      <div class="section-head"><div class="head-left"><span class="cn-seal seal-num" aria-hidden="true">五</span><h2>单品示范</h2></div></div>
+      <h3 class="item-group-title">旗袍</h3>
+      <div class="item-panel-static">
+        <div class="item-grid">
+          <figure class="item-figure"><img src="./assets/img/item/qipao-1.jpg" alt="旗袍单品示范 1"></figure>
+          <figure class="item-figure"><img src="./assets/img/item/qipao-2.jpg" alt="旗袍单品示范 2"></figure>
+          <figure class="item-figure"><img src="./assets/img/item/qipao-3.jpg" alt="旗袍单品示范 3"></figure>
+        </div>
+      </div>
+      <h3 class="item-group-title">中式上衣</h3>
+      <div class="item-panel-static">
+        <div class="item-grid">
+          <figure class="item-figure"><img src="./assets/img/item/top-1.jpg" alt="中式上衣单品示范 1"></figure>
+          <figure class="item-figure"><img src="./assets/img/item/top-2.jpg" alt="中式上衣单品示范 2"></figure>
+          <figure class="item-figure"><img src="./assets/img/item/top-3.jpg" alt="中式上衣单品示范 3"></figure>
+        </div>
+      </div>
+    </section>
+    <div class="spacer"></div>
+  </main>
+
+  <!-- 页脚：梅花 -->
+  <footer class="cn-footer cn-deco" aria-hidden="false">
+    <svg viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g fill="none" stroke="#d6a544" stroke-width="2" stroke-linecap="round">
+        <path d="M20 40 h190 M310 40 h190"/>
+      </g>
+      <g transform="translate(232,10)">
+        <g fill="#c5162e" opacity=".92"><circle cx="28" cy="12" r="9"/><circle cx="45" cy="25" r="9"/><circle cx="38" cy="45" r="9"/><circle cx="18" cy="45" r="9"/><circle cx="11" cy="25" r="9"/></g>
+        <circle cx="28" cy="28" r="6" fill="#d6a544"/>
+        <g stroke="#d6a544" stroke-width="1.5" stroke-linecap="round"><path d="M28 28 l0 -9 M28 28 l8 5 M28 28 l-8 5 M28 28 l6 -7 M28 28 l-6 -7"/></g>
+      </g>
+    </svg>
+    <p>穿搭暗号对一下 · 中式辣感</p>
+  </footer>
+  
+</body></html>
