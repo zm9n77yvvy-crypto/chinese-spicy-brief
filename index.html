@@ -116,9 +116,9 @@
     @media (max-width:640px){.fmt-row{grid-template-columns:1fr}.fmt-left{padding:12px 14px}.fmt-right{grid-template-columns:84px 1fr}.fmt-thumb{width:84px;height:112px}}
 
     /* 穿搭思路：4 卡平铺，每卡 2 图可切换 */
-    .idea-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .idea-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:680px;margin:0 auto}
     .idea{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 12px 30px rgba(94,25,31,.12)}
-    .idea-stage{position:relative;aspect-ratio:4/5;background:#f7ebe5}
+    .idea-stage{position:relative;aspect-ratio:1/1;background:#f7ebe5}
     .idea-stage img{width:100%;height:100%;object-fit:cover;display:block}
     .idea-nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border:0;border-radius:50%;background:rgba(36,21,21,.6);color:#fff;font-size:22px;font-weight:900;cursor:pointer;display:grid;place-items:center;z-index:2}
     .idea-nav:hover{background:var(--red-dark)}
@@ -129,8 +129,7 @@
     .idea-cap{padding:12px 14px}
     .idea-cap h4{margin:0 0 4px;font-size:16px;line-height:1.3}
     .idea-cap p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
-    @media (max-width:860px){.idea-grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:520px){.idea-grid{grid-template-columns:1fr}}
+    @media (max-width:640px){.idea-grid{grid-template-columns:1fr;max-width:340px}}
     .cn-plum{display:flex;align-items:center;justify-content:center;gap:14px;max-width:980px;margin:6px auto 0;padding:0 18px}
     .cn-plum .line{height:1px;flex:1;max-width:300px;background:linear-gradient(90deg,transparent,rgba(197,22,46,.4),transparent)}
     .cn-plum svg{width:34px;height:auto;flex:0 0 auto}
